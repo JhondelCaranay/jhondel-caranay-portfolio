@@ -1,17 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { useIsClient } from "usehooks-ts";
+import * as motion from "framer-motion/client";
 import { navLinks } from "@/utils/nav-links";
+import { MenuIcon } from "./menu-icon";
 
 export const Navbar = () => {
-  const isClient = useIsClient();
-
-  if (!isClient) {
-    return null;
-  }
-
   return (
     <div className="sticky top-0 z-50 h-20 w-full bg-bodyColor/50 px-5 shadow-navbarShadow lg:h-[12vh]">
       <div className="mx-auto flex h-full max-w-container items-center justify-between py-1 font-titleFont">
@@ -113,6 +107,9 @@ export const Navbar = () => {
             </motion.button>
           </a>
         </div>
+
+        {/* small icon section */}
+        <MenuIcon />
       </div>
     </div>
   );
