@@ -1,10 +1,11 @@
 "use client";
 
+import { typewriterData } from "@/utils/data";
 import { motion, Variants } from "framer-motion";
 import { useEffect, useState } from "react";
 import TypewriterComponent, { Options } from "typewriter-effect";
 
-const Banner = () => {
+export const Banner = () => {
   const [autoStart, setAutoStart] = useState(false);
 
   useEffect(() => {
@@ -37,12 +38,7 @@ const Banner = () => {
           <TypewriterComponent
             options={
               {
-                strings: [
-                  "Creating modern web experiences.",
-                  "Specializing in Node.js backend development.",
-                  "Building intuitive UIs with React.",
-                  "Passionate full-stack developer.",
-                ],
+                strings: typewriterData,
                 autoStart: autoStart,
                 loop: true,
                 pauseFor: 0,
@@ -79,8 +75,6 @@ const Banner = () => {
     </motion.div>
   );
 };
-
-export default Banner;
 
 const bannerVariants: Variants = {
   hidden: {

@@ -1,4 +1,5 @@
-import Banner from "@/components/banner/banner";
+import { About } from "@/components/about/about";
+import { Banner } from "@/components/banner/banner";
 import { Leftside } from "@/components/left-side";
 import { Navbar } from "@/components/navbar";
 import { RightSided } from "@/components/right-side";
@@ -12,6 +13,7 @@ export default function Home() {
         <Leftside />
         <div className="mx-auto h-[88vh] w-full max-w-container p-4">
           <Banner />
+          <About />
         </div>
         <RightSided />
       </div>
