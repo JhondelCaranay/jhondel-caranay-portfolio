@@ -30,7 +30,7 @@ export const Navbar = () => {
         >
           <h1 className="text-textDark flex items-center gap-1 text-[20px] font-bold">
             <span className="text-colorGreen">{"<"}</span>
-            <span className="text-colorLight"> Caranay </span>
+            <span className="text-colorLight"> Jhondel </span>
             <span className="text-colorGreen">{"/>"}</span>
           </h1>
         </motion.div>

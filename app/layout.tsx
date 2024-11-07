@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { inter, montserrat } from "@/utils/fonts";
+import { Providers } from "@/providers/Providers";
 
 export const metadata: Metadata = {
   title: "jhondel delicona caranay",
@@ -15,7 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${montserrat.className} antialiased`}>{children}</body>
+      <body
+        className={`${inter.className} ${montserrat.className} antialiased`}
+      >
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

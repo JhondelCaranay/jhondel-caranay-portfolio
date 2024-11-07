@@ -13,6 +13,34 @@
     --foreground: #ededed;
   }
 }
+/* 
+html *,
+body * {
+  scroll-behavior: smooth;
+} */
+
+/* Custom thin teal scrollbar */
+.scrollbar-thin-teal {
+  @apply overflow-auto;
+}
+
+.scrollbar-thin-teal::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.scrollbar-thin-teal::-webkit-scrollbar-thumb {
+  background-color: #38b2ac; /* Tailwind's teal-500 */
+  border-radius: 4px;
+}
+
+.scrollbar-thin-teal::-webkit-scrollbar-thumb:hover {
+  background-color: #319795; /* Teal-600 */
+}
+
+.scrollbar-thin-teal::-webkit-scrollbar-track {
+  background-color: #e6fffa; /* Teal-50 */
+}
 
 body {
   color: var(--foreground);

@@ -56,7 +56,7 @@ export const Banner = () => {
         applications with a focus on clean code and effective problem-solving.
         Seeking opportunities to contribute my expertise in a dynamic
         development role.
-        <a href="">
+        <a href="#about">
           <span className="group relative block h-7 w-fit cursor-pointer overflow-x-hidden text-colorGreen">
             Learn more
             <span className="absolute bottom-1 left-0 h-[1px] w-full -translate-x-full transform bg-colorGreen text-colorGreen transition-transform duration-300 ease-in-out group-hover:translate-x-0"></span>

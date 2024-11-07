@@ -8,8 +8,8 @@ import { motion, Variants } from "framer-motion";
 import { meImg } from "@/assets";
 import { backend, database, frontend, others } from "@/utils/data";
 /* COMPONENTS */
-import SectionTitle from "../section-title";
 import { SkillList } from "./skill-list";
+import { SectionTitle } from "../section-title";
 
 export const About = () => {
   // animate on scroll when in view

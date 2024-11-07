@@ -17,6 +17,11 @@ export const RightSided = () => {
     >
       <div className="flex h-full w-full flex-col items-center justify-end gap-6 text-colorLight">
         <a href={`mailto:${gmail}`}>
+          {/* <a
+          href={`https://mail.google.com/mail/?view=cm&fs=1&to=${gmail}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        > */}
           <p className="w-72 -translate-y-28 rotate-90 text-sm tracking-wide text-colorGreen hover:drop-shadow-dropShadowGlow">
             {gmail}
           </p>
