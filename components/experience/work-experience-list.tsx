@@ -12,7 +12,7 @@ export const WorkExperienceList = ({
   activeWorkExp,
 }: Props) => {
   return (
-    <ul className="scrollbar-thin-teal flex max-h-[176px] flex-col overflow-auto md:w-64">
+    <ul className="scrollbar-thin-teal flex max-h-[176px] min-w-[200px] flex-col overflow-auto md:w-64">
       {data.map((experience) => {
         const isActive = activeWorkExp === experience.id;
         return (

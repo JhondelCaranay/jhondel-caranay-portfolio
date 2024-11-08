@@ -1,3 +1,10 @@
+import { TbBrandGithub } from "react-icons/tb";
+import {
+  // SlSocialGoogle,
+  SlSocialFacebook,
+  SlSocialLinkedin,
+} from "react-icons/sl";
+import { SiUpwork } from "react-icons/si";
 import { WorkExperience } from "./types";
 
 export const typewriterData = [
@@ -41,6 +48,25 @@ export const others = [
   "Vercel",
 ];
 
+export const socialAccounts = [
+  {
+    link: process.env.NEXT_PUBLIC_SOCIAL_GITHUB_LINK,
+    icon: TbBrandGithub,
+  },
+  {
+    link: process.env.NEXT_PUBLIC_SOCIAL_UPWORK_LINK,
+    icon: SiUpwork,
+  },
+  {
+    link: process.env.NEXT_PUBLIC_SOCIAL_FACEBOOK_LINK,
+    icon: SlSocialFacebook,
+  },
+  {
+    link: process.env.NEXT_PUBLIC_SOCIAL_LINKEDIN_LINK,
+    icon: SlSocialLinkedin,
+  },
+];
+
 export const workExperiences: WorkExperience[] = [
   {
     id: "1",
@@ -53,7 +79,7 @@ export const workExperiences: WorkExperience[] = [
   },
   {
     id: "2",
-    jobTitle: "Web Developer OJT",
+    jobTitle: "React Developer OJT",
     company: "SPEDI",
     year: "SEP 2022 - JAN 2023",
     type: "Remote",

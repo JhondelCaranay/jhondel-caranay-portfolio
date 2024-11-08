@@ -3,6 +3,7 @@ import { Banner } from "@/components/banner/banner";
 import { WorkExperiences } from "@/components/experience/work-experiences";
 import { Leftside } from "@/components/left-side";
 import { Navbar } from "@/components/navbar";
+import { Projects } from "@/components/projects/projects";
 import { RightSided } from "@/components/right-side";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
           <Banner />
           <About />
           <WorkExperiences />
+          <Projects />
         </div>
         <RightSided />
       </div>

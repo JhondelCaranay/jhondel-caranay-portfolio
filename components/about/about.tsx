@@ -5,8 +5,8 @@ import Image from "next/image";
 import useScrollView from "@/hooks/use-scroll-view";
 import { motion, Variants } from "framer-motion";
 /* UTILS */
-import { meImg } from "@/assets";
 import { backend, database, frontend, others } from "@/utils/data";
+import { meImg } from "@/public";
 /* COMPONENTS */
 import { SkillList } from "./skill-list";
 import { SectionTitle } from "../section-title";

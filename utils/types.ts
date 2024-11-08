@@ -6,3 +6,14 @@ export type WorkExperience = {
   type: string;
   description: string;
 };
+
+export type ProjectType = {
+  id: string;
+  type: string;
+  title: string;
+  content: string;
+  image: string;
+  techstack: string[];
+  liveUrl: string;
+  coreUrl: string;
+};
