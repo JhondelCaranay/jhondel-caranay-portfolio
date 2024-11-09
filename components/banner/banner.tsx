@@ -63,15 +63,17 @@ export const Banner = () => {
           </span>
         </a>
       </motion.p>
-      <motion.button
-        className="h-14 w-52 rounded-md border border-colorGreen font-titleFont text-sm tracking-wide text-colorGreen duration-300 hover:bg-HoverColor"
-        variants={buttonVariants}
-        whileHover="hover"
-        initial="hidden"
-        animate="visible"
-      >
-        Check out my Project!
-      </motion.button>
+      <a href="#projects">
+        <motion.button
+          className="h-14 w-52 rounded-md border border-colorGreen font-titleFont text-sm tracking-wide text-colorGreen duration-300 hover:bg-HoverColor"
+          variants={buttonVariants}
+          whileHover="hover"
+          initial="hidden"
+          animate="visible"
+        >
+          Check out my Project!
+        </motion.button>
+      </a>
     </motion.div>
   );
 };

@@ -34,7 +34,7 @@ export const ProjectDetail = ({ data }: Props) => {
         )}
       >
         <motion.div
-          className="group relative h-auto w-full overflow-hidden rounded-md xl:w-1/2"
+          className="group relative h-auto w-full xl:w-1/2"
           ref={imageRef}
           custom={position}
           variants={imageVariants}
@@ -44,13 +44,14 @@ export const ProjectDetail = ({ data }: Props) => {
         >
           {/* <Link href={data.liveUrl} target="_blank"> */}
           <Image
-            width={700}
-            height={500}
+            width={800}
+            height={600}
             src={data.image}
             alt=""
-            className="h-full w-full border border-colorLight object-contain"
+            className="h-full w-full rounded-md object-cover"
           />
           {/* </Link> */}
+          <div className="absolute left-0 top-0 size-full rounded-lg bg-colorGreen/10 duration-300 group-hover:bg-transparent"></div>
         </motion.div>
 
         <motion.div
@@ -86,9 +87,9 @@ export const ProjectDetail = ({ data }: Props) => {
           <TechStack data={data.techstack} position={position} />
 
           <div className="flex gap-4 text-2xl">
-            {data.coreUrl && (
+            {data.codeUrl && (
               <Link
-                href={data.coreUrl}
+                href={data.codeUrl}
                 target="_blank"
                 className="duration-300 hover:text-colorGreen"
               >

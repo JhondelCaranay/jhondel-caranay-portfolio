@@ -4,6 +4,7 @@ type Props = {
   data: string[];
   position: string;
 };
+
 export const TechStack = ({ data, position }: Props) => {
   return (
     <ul

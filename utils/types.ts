@@ -15,5 +15,5 @@ export type ProjectType = {
   image: string;
   techstack: string[];
   liveUrl: string;
-  coreUrl: string;
+  codeUrl: string;
 };
