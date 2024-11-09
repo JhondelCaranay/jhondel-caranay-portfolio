@@ -5,6 +5,7 @@ import { Leftside } from "@/components/left-side";
 import { Navbar } from "@/components/navbar";
 import { Projects } from "@/components/projects/projects";
 import { RightSided } from "@/components/right-side";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -16,7 +17,9 @@ export default function Home() {
         <div className="mx-auto h-[88vh] w-full max-w-container p-4">
           <Banner />
           <About />
-          <WorkExperiences />
+          <Suspense >
+            <WorkExperiences />
+          </Suspense>
           <Projects />
         </div>
         <RightSided />
