@@ -21,15 +21,6 @@ export const WorkExperienceDetail = ({ workExp }: Props) => {
       animate="visible"
       className="relative h-fit rounded-md border-2 border-colorGreen p-5"
     >
-      <div className="absolute right-5 top-5 cursor-pointer duration-300 hover:text-colorGreen">
-        <p className="mt-1 text-xs font-medium text-colorDark">
-          {workExp.year}
-        </p>
-        <p className="mt-1 text-end text-xs font-medium text-colorDark">
-          {workExp.type}
-        </p>
-      </div>
-
       <h3 className="flex gap-1 font-titleFont text-xl font-medium text-colorGreen">
         {workExp.jobTitle}
       </h3>
@@ -37,6 +28,15 @@ export const WorkExperienceDetail = ({ workExp }: Props) => {
       <p className="mt-1 text-sm font-medium text-colorDark">
         {workExp.company}
       </p>
+
+      <div className="right-5 top-5 cursor-pointer duration-300 hover:text-colorGreen md:absolute">
+        <p className="mt-1 text-xs font-medium text-colorDark">
+          {workExp.year}
+        </p>
+        <p className="mt-1 font-medium text-colorDark md:text-end">
+          {workExp.type}
+        </p>
+      </div>
 
       <ul className="mt-6 flex flex-col gap-3 overflow-auto p-1">
         {descriptions.map((description, index) => (

@@ -74,13 +74,20 @@ export const ProjectDetail = ({ data }: Props) => {
               position === "right" && "flex-row-reverse",
             )}
           >
-            <h3 className="text-2xl font-bold">{data.title}</h3>
-            <p className="font-titleFont text-sm tracking-wide text-colorGreen">
+            <h3 className="w-2/3 text-sm font-bold md:text-2xl">
+              {data.title}
+            </h3>
+            <p
+              className={clsx(
+                "w-1/3 font-titleFont text-[8px] tracking-wide text-colorGreen md:text-sm",
+                position === "right" ? "text-start" : "text-end",
+              )}
+            >
               {data.type}
             </p>
           </div>
 
-          <p className="rounded-md bg-[#112240] p-2 text-sm md:p-6 md:text-base">
+          <p className="rounded-md bg-[#112240] p-2 text-xs md:p-6 md:text-base">
             {data.content}
           </p>
 
