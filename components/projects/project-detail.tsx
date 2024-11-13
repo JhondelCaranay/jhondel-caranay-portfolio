@@ -52,7 +52,7 @@ export const ProjectDetail = ({ data }: Props) => {
             className="h-full w-full rounded-md object-cover"
           />
           {/* </Link> */}
-          <div className="absolute left-0 top-0 size-full rounded-lg bg-colorGreen/10 duration-300 group-hover:bg-transparent"></div>
+          <div className="bg-colorPrimary/10 absolute left-0 top-0 size-full rounded-lg duration-300 group-hover:bg-transparent"></div>
         </motion.div>
 
         {/* content */}
@@ -79,7 +79,7 @@ export const ProjectDetail = ({ data }: Props) => {
             <h3 className="text-lg font-bold md:text-2xl">{data.title}</h3>
             <p
               className={clsx(
-                "font-titleFont text-xs tracking-wide text-colorGreen md:text-base",
+                "text-colorPrimary font-titleFont text-xs tracking-wide md:text-base",
                 // position === "right" ? "text-start" : "text-end",
               )}
             >
@@ -103,7 +103,7 @@ export const ProjectDetail = ({ data }: Props) => {
               <Link
                 href={data.codeUrl}
                 target="_blank"
-                className="duration-300 hover:text-colorGreen"
+                className="hover:text-colorPrimary duration-300"
               >
                 <TbBrandGithub />
               </Link>
@@ -112,7 +112,7 @@ export const ProjectDetail = ({ data }: Props) => {
               <Link
                 href={data.liveUrl}
                 target="_blank"
-                className="duration-300 hover:text-colorGreen"
+                className="hover:text-colorPrimary duration-300"
               >
                 <RxOpenInNewWindow />
               </Link>

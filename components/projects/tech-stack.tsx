@@ -15,7 +15,7 @@ export const TechStack = ({ data, position }: Props) => {
     >
       {data.map((tech, index) => (
         <li key={index}>
-          <span className="rounded-md bg-teal-950/30 px-2 py-1 text-colorGreen hover:bg-teal-950/80">
+          <span className="text-colorPrimary bg-colorPrimary/10 hover:bg-colorPrimary/20 rounded-md px-2 py-1">
             {tech}
           </span>
         </li>

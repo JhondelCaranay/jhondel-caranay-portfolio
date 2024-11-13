@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} ${montserrat.className} antialiased`}
+        className={`${inter.className} ${montserrat.className} overflow-auto antialiased`}
       >
         <Providers>{children}</Providers>
       </body>

@@ -1,3 +1,5 @@
+import { IconType } from "react-icons";
+
 export type WorkExperience = {
   id: string;
   jobTitle: string;
@@ -16,4 +18,13 @@ export type ProjectType = {
   techstack: string[];
   liveUrl: string;
   codeUrl: string;
+};
+
+export type ServiceType = {
+  id: string;
+  icon: IconType;
+  title: string;
+  description: string;
+  details: string;
+  technologies: string[];
 };

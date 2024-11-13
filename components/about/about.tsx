@@ -22,9 +22,9 @@ export const About = () => {
       variants={parentVariants}
       initial="hidden"
       animate={mainControls}
-      className="mx-auto flex max-w-contentContainer flex-col gap-8 py-10 lgl:py-32 xl:px-4"
+      className="mx-auto flex max-w-container flex-col gap-8 py-10 lgl:px-20 lgl:py-32"
     >
-      <SectionTitle title="About Me" titleNumber="01" />
+      <SectionTitle title="About Me" titleNumber="I" />
       <div className="flex flex-col gap-16 lgl:flex-row">
         {/* left side */}
         <div className="text-textDark flex w-full flex-col gap-4 text-base font-medium lgl:w-2/3">
@@ -37,7 +37,7 @@ export const About = () => {
             NestJS, and NextJS. Im driven by the challenge of transforming ideas
             into functional and engaging online solutions.
           </p>
-          <p className="text-colorGreen">
+          <p className="text-colorPrimary">
             Here are a few technologies I&apos;ve been exploring and working
             with recently:
           </p>
@@ -59,10 +59,10 @@ export const About = () => {
                 className="h-full w-full rounded-lg object-cover"
                 alt="profile image"
               />
-              <div className="absolute left-0 top-0 hidden h-80 w-full rounded-md bg-colorGreen/20 duration-300 group-hover:bg-transparent lgl:inline-block"></div>
+              <div className="bg-colorPrimary/20 absolute left-0 top-0 hidden h-80 w-full rounded-md duration-300 group-hover:bg-transparent lgl:inline-block"></div>
             </div>
           </div>
-          <div className="hidden h-80 w-full rounded-md border-2 border-colorGreen transition-transform duration-300 group-hover:-translate-x-2 group-hover:-translate-y-2 lgl:inline-flex" />
+          <div className="border-colorPrimary hidden h-80 w-full rounded-md border-2 transition-transform duration-300 group-hover:-translate-x-2 group-hover:-translate-y-2 lgl:inline-flex" />
         </div>
       </div>
     </motion.div>

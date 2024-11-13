@@ -22,7 +22,7 @@ export const RightSided = () => {
           target="_blank"
           rel="noopener noreferrer"
         > */}
-          <p className="w-72 -translate-y-28 rotate-90 text-sm tracking-wide text-colorGreen hover:drop-shadow-dropShadowGlow">
+          <p className="text-colorPrimary w-72 -translate-y-28 rotate-90 text-sm tracking-wide hover:drop-shadow-dropShadowGlow">
             {gmail}
           </p>
         </a>

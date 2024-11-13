@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import romans from "romans";
 import * as motion from "framer-motion/client";
 import { navLinks } from "@/utils/nav-links";
 import { MenuIcon } from "./menu-icon";
@@ -29,9 +30,9 @@ export const Navbar = () => {
           animate="visible"
         >
           <h1 className="text-textDark flex items-center gap-1 text-[20px] font-bold">
-            <span className="text-colorGreen">{"<"}</span>
+            <span className="text-colorPrimary">{"<"}</span>
             <span className="text-colorLight"> Jhondel </span>
-            <span className="text-colorGreen">{"/>"}</span>
+            <span className="text-colorPrimary">{"/>"}</span>
           </h1>
         </motion.div>
         {/* nav link */}
@@ -74,7 +75,9 @@ export const Navbar = () => {
                   className="text-textDark hover:text-textGreen nav-link flex cursor-pointer items-center gap-1 font-medium"
                 >
                   {index != 0 && (
-                    <span className="text-colorGreen">0{index}.</span>
+                    <span className="text-colorPrimary">
+                      {romans.romanize(Number(index))}.
+                    </span>
                   )}
                   {link.name}
                 </Link>
@@ -85,7 +88,7 @@ export const Navbar = () => {
           {/* resume button */}
           <a href="jhondel-delicona-caranay.pdf" target="_blank">
             <motion.button
-              className="rounded-md border border-colorGreen px-4 py-2 text-[13px] text-colorGreen hover:bg-HoverColor"
+              className="border-colorPrimary text-colorPrimary rounded-md border px-4 py-2 text-[13px] hover:bg-HoverColor"
               variants={{
                 hidden: {
                   opacity: 0,

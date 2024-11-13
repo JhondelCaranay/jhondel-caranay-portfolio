@@ -37,10 +37,10 @@ export const WorkExperiences = () => {
       variants={parentVariants}
       initial="hidden"
       animate={mainControls}
-      className="mx-auto max-w-contentContainer px-4 py-10 lgl:py-32"
+      className="mx-auto max-w-container px-4 py-10 lgl:px-20 lgl:py-24"
     >
-      <SectionTitle title="Experience" titleNumber="02" />
-      <div className="mt-10 flex w-full flex-col gap-16 md:flex-row">
+      <SectionTitle title="Experience" titleNumber="II" />
+      <div className="mt-10 flex w-full flex-col gap-8 md:flex-row">
         <WorkExperienceList
           data={workExperiences}
           handleChangeWorkExp={handleChangeWorkExp}

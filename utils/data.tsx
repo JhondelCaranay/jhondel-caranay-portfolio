@@ -5,7 +5,7 @@ import {
   SlSocialLinkedin,
 } from "react-icons/sl";
 import { SiUpwork } from "react-icons/si";
-import { ProjectType, WorkExperience } from "./types";
+import { ProjectType, ServiceType, WorkExperience } from "./types";
 
 export const typewriterData = [
   "Creating modern web experiences.",
@@ -190,3 +190,98 @@ export const projects: ProjectType[] = [
     liveUrl: "",
   },
 ];
+
+// const services = [
+//   {
+//     title: "Full-Stack Web Development",
+//     // icon: <Code className="h-12 w-12 text-indigo-500" />,
+//     description: "Build custom web applications from start to finish, handling both the frontend (user interface) and backend (server and database).",
+//     technologies: ["MERN stack", "Next.js", "Laravel", "SQL Server", "MySQL"],
+//     details: "I create responsive, reliable apps tailored to your needs, including setup, design, and deployment."
+//   },
+//   {
+//     title: "Application Deployment and Maintenance",
+//     // icon: <Cloud className="h-12 w-12 text-sky-500" />,
+//     description: "Set up and maintain applications on cloud platforms for smooth performance.",
+//     technologies: ["AWS EC2", "S3", "Docker", "Nginx", "PM2"],
+//     details: "I deploy apps, configure servers, and offer ongoing support to keep everything running efficiently."
+//   },
+//   {
+//     title: "Database Management and Optimization",
+//     // icon: <Database className="h-12 w-12 text-emerald-500" />,
+//     description: "Design and manage databases to ensure fast and secure data handling.",
+//     technologies: ["SQL Server", "MySQL", "Prisma"],
+//     details: "I handle database setup, data corrections, and optimization to keep applications performing well and data secure."
+//   }
+// ]
+import { BsCode, BsDatabase, BsCloud } from "react-icons/bs";
+// className="h-12 w-12 text-indigo-500"
+export const services: ServiceType[] = [
+  {
+    id: "1",
+    title: "Full-Stack Web Development",
+    icon: BsCode,
+    description:
+      "Build custom web applications from start to finish, handling both the frontend and backend.",
+    technologies: [
+      "React Js",
+      "Express Js",
+      "Nest Js",
+      "Next Js",
+      "Hono",
+      "PHP",
+    ],
+    details:
+      "I create responsive, reliable apps tailored to your needs, including setup, design, and deployment.",
+  },
+  {
+    id: "2",
+    title: "Application Deployment and Maintenance",
+    icon: BsDatabase,
+    description:
+      "Set up and maintain applications on cloud platforms for smooth performance.",
+    technologies: ["AWS EC2", "Cloudenary", "Docker", "Nginx", "PM2"],
+    details:
+      "I deploy apps, configure servers, and offer ongoing support to keep everything running efficiently.",
+  },
+  {
+    id: "3",
+    title: "Database Management and Optimization",
+    icon: BsCloud,
+    description:
+      "Design and manage databases to ensure fast and secure data handling.",
+    technologies: [
+      "SQL Server",
+      "MySQL",
+      "PostgreSQL",
+      "Mongo DB",
+      "Prisma",
+      "Drizzle",
+    ],
+    details:
+      "I handle database setup, data corrections, and optimization to keep applications performing well and data secure.",
+  },
+];
+// const services = [
+//   {
+//     title: "Full-Stack Web Development",
+//     // icon: <Code className="h-12 w-12 text-indigo-500" />,
+//     description: "Build custom web applications from start to finish, handling both the frontend (user interface) and backend (server and database).",
+//     technologies: ["MERN stack", "Next.js", "Laravel", "SQL Server", "MySQL"],
+//     details: "I create responsive, reliable apps tailored to your needs, including setup, design, and deployment."
+//   },
+//   {
+//     title: "Application Deployment and Maintenance",
+//     // icon: <Cloud className="h-12 w-12 text-sky-500" />,
+//     description: "Set up and maintain applications on cloud platforms for smooth performance.",
+//     technologies: ["AWS EC2", "S3", "Docker", "Nginx", "PM2"],
+//     details: "I deploy apps, configure servers, and offer ongoing support to keep everything running efficiently."
+//   },
+//   {
+//     title: "Database Management and Optimization",
+//     // icon: <Database className="h-12 w-12 text-emerald-500" />,
+//     description: "Design and manage databases to ensure fast and secure data handling.",
+//     technologies: ["SQL Server", "MySQL", "Prisma"],
+//     details: "I handle database setup, data corrections, and optimization to keep applications performing well and data secure."
+//   }
+// ]

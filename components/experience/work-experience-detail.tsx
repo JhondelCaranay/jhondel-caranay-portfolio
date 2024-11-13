@@ -19,9 +19,9 @@ export const WorkExperienceDetail = ({ workExp }: Props) => {
       variants={workExpDetailVariants}
       initial="hidden"
       animate="visible"
-      className="relative h-fit rounded-md border-2 border-colorGreen p-5"
+      className="border-colorPrimary relative h-fit rounded-md border-2 p-5"
     >
-      <h3 className="flex gap-1 font-titleFont text-xl font-medium text-colorGreen">
+      <h3 className="text-colorPrimary flex gap-1 font-titleFont text-xl font-medium">
         {workExp.jobTitle}
       </h3>
 
@@ -29,11 +29,11 @@ export const WorkExperienceDetail = ({ workExp }: Props) => {
         {workExp.company}
       </p>
 
-      <div className="right-5 top-5 cursor-pointer duration-300 hover:text-colorGreen md:absolute">
+      <div className="hover:text-colorPrimary right-5 top-5 cursor-pointer duration-300 md:absolute">
         <p className="mt-1 text-xs font-medium text-colorDark">
           {workExp.year}
         </p>
-        <p className="mt-1 font-medium text-colorDark md:text-end">
+        <p className="mt-1 text-xs font-medium text-colorDark md:text-end">
           {workExp.type}
         </p>
       </div>
@@ -41,7 +41,7 @@ export const WorkExperienceDetail = ({ workExp }: Props) => {
       <ul className="mt-6 flex flex-col gap-3 overflow-auto p-1">
         {descriptions.map((description, index) => (
           <li className="flex gap-2 text-base text-colorDark" key={index}>
-            <span className="mt-1 text-colorGreen">
+            <span className="text-colorPrimary mt-1">
               <TiArrowForward />
             </span>
             <div>{description}</div>

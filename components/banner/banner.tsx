@@ -24,7 +24,7 @@ export const Banner = () => {
       animate="visible"
     >
       <motion.h3
-        className="font-titleFont text-lg tracking-wide text-colorGreen"
+        className="text-colorPrimary font-titleFont text-lg tracking-wide"
         variants={bannerItemVariants}
       >
         Hi, my name is
@@ -57,15 +57,15 @@ export const Banner = () => {
         Seeking opportunities to contribute my expertise in a dynamic
         development role.
         <a href="#about">
-          <span className="group relative block h-7 w-fit cursor-pointer overflow-x-hidden text-colorGreen">
+          <span className="text-colorPrimary group relative block h-7 w-fit cursor-pointer overflow-x-hidden">
             Learn more
-            <span className="absolute bottom-1 left-0 h-[1px] w-full -translate-x-full transform bg-colorGreen text-colorGreen transition-transform duration-300 ease-in-out group-hover:translate-x-0"></span>
+            <span className="bg-colorPrimary text-colorPrimary absolute bottom-1 left-0 h-[1px] w-full -translate-x-full transform transition-transform duration-300 ease-in-out group-hover:translate-x-0"></span>
           </span>
         </a>
       </motion.p>
       <a href="#projects">
         <motion.button
-          className="h-14 w-52 rounded-md border border-colorGreen font-titleFont text-sm tracking-wide text-colorGreen duration-300 hover:bg-HoverColor"
+          className="border-colorPrimary text-colorPrimary h-14 w-52 rounded-md border font-titleFont text-sm tracking-wide duration-300 hover:bg-HoverColor"
           variants={buttonVariants}
           whileHover="hover"
           initial="hidden"

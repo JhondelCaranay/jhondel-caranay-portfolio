@@ -38,7 +38,8 @@ const config: Config = {
       },
       colors: {
         bodyColor: "#0A192F",
-        colorGreen: "#64ffda",
+        // colorPrimary: "#64ffda",
+        colorPrimary: "#38bdf8",
         colorLight: "#ccd6f6",
         colorDark: "#8892b0",
         HoverColor: "rgba(100, 255, 218, 0.1)",

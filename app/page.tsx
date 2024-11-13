@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+
 import { About } from "@/components/about/about";
 import { Banner } from "@/components/banner/banner";
 import { WorkExperiences } from "@/components/experience/work-experiences";
@@ -5,7 +7,7 @@ import { Leftside } from "@/components/left-side";
 import { Navbar } from "@/components/navbar";
 import { Projects } from "@/components/projects/projects";
 import { RightSided } from "@/components/right-side";
-import { Suspense } from "react";
+import { Services } from "@/components/services/services";
 
 export default function Home() {
   return (
@@ -21,6 +23,7 @@ export default function Home() {
             <WorkExperiences />
           </Suspense>
           <Projects />
+          <Services />
         </div>
         <RightSided />
       </div>
