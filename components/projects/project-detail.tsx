@@ -33,6 +33,7 @@ export const ProjectDetail = ({ data }: Props) => {
           position === "right" ? "xl:flex-row" : "xl:flex-row-reverse",
         )}
       >
+        {/* image */}
         <motion.div
           className="group relative h-auto w-full xl:w-1/2"
           ref={imageRef}
@@ -54,6 +55,7 @@ export const ProjectDetail = ({ data }: Props) => {
           <div className="absolute left-0 top-0 size-full rounded-lg bg-colorGreen/10 duration-300 group-hover:bg-transparent"></div>
         </motion.div>
 
+        {/* content */}
         <motion.div
           className={clsx(
             "z-10 flex h-full w-full flex-col gap-5 lgl:justify-between xl:w-1/2",
@@ -70,30 +72,33 @@ export const ProjectDetail = ({ data }: Props) => {
         >
           <div
             className={clsx(
-              "flex items-center justify-between md:w-[90%]",
+              "flex w-full flex-col justify-start",
               position === "right" && "flex-row-reverse",
             )}
           >
-            <h3 className="w-2/3 text-sm font-bold md:text-2xl">
-              {data.title}
-            </h3>
+            <h3 className="text-lg font-bold md:text-2xl">{data.title}</h3>
             <p
               className={clsx(
-                "w-1/3 font-titleFont text-[8px] tracking-wide text-colorGreen md:text-sm",
-                position === "right" ? "text-start" : "text-end",
+                "font-titleFont text-xs tracking-wide text-colorGreen md:text-base",
+                // position === "right" ? "text-start" : "text-end",
               )}
             >
               {data.type}
             </p>
           </div>
 
-          <p className="rounded-md bg-[#112240] p-2 text-xs md:p-6 md:text-base">
+          <p className="rounded-md bg-[#112240] p-2 text-xs md:p-6 md:text-sm">
             {data.content}
           </p>
 
           <TechStack data={data.techstack} position={position} />
 
-          <div className="flex gap-4 text-2xl">
+          <div
+            className={clsx(
+              "flex items-center gap-4 text-2xl",
+              position === "left" ? "justify-start" : "justify-end",
+            )}
+          >
             {data.codeUrl && (
               <Link
                 href={data.codeUrl}

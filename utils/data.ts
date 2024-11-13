@@ -175,7 +175,7 @@ export const projects: ProjectType[] = [
     title: "Finance Management System",
     content:
       "A web-based finance management system designed to help users efficiently track and manage their income, expenses, budgets, and financial goals, with features like expense categorization, budget planning, and transaction history.",
-    image: "/images/finance.png",
+    image: "/images/finance-system.png",
     techstack: [
       "Next Js",
       "Shadcn UI",
