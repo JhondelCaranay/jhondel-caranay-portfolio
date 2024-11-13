@@ -1,13 +1,13 @@
 type Props = {
   title: string;
   titleNumber: string;
-  line: boolean;
+  line?: boolean;
 };
 
 export const SectionTitle = ({ title, titleNumber, line = true }: Props) => {
   return (
     <h2 className="flex items-center font-titleFont text-2xl font-semibold">
-      <span className="text-colorPrimary mr-2 text-base md:text-lg">
+      <span className="mr-2 text-base text-colorPrimary md:text-lg">
         {titleNumber}.
       </span>{" "}
       {title}
