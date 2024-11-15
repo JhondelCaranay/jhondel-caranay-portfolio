@@ -9,10 +9,11 @@ import { Projects } from "@/components/projects/projects";
 import { RightSide } from "@/components/right-side";
 import { Services } from "@/components/services/services";
 import { Contact } from "@/components/contact/contact";
+import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
-    <div className="h-screen max-h-screen w-full overflow-y-auto overflow-x-hidden scroll-smooth bg-gradient-to-r from-bodyColor via-bodyColor to-indigo-950 font-bodyFont text-colorLight">
+    <div className="scrollbar scrollbar-track-colorDark/20 scrollbar-thumb-colorDark/60 h-screen max-h-screen w-full overflow-y-auto overflow-x-hidden scroll-smooth bg-gradient-to-r from-bodyColor via-bodyColor to-indigo-950 font-bodyFont text-colorLight">
       <Navbar />
 
       <div className="h-[88vh] w-full items-center justify-between gap-20 xl:flex">
@@ -26,6 +27,7 @@ export default function Home() {
           <Projects />
           <Services />
           <Contact />
+          <Footer />
         </div>
         <RightSide />
       </div>
