@@ -8,6 +8,7 @@ import { Navbar } from "@/components/navbar";
 import { Projects } from "@/components/projects/projects";
 import { RightSided } from "@/components/right-side";
 import { Services } from "@/components/services/services";
+import { Contact } from "@/components/contact/contact";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
           </Suspense>
           <Projects />
           <Services />
+          <Contact />
         </div>
         <RightSided />
       </div>

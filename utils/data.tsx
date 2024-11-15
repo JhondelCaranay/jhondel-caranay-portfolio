@@ -240,7 +240,7 @@ export const services: ServiceType[] = [
     icon: BsDatabase,
     description:
       "Set up and maintain applications on cloud platforms for smooth performance.",
-    technologies: ["AWS EC2", "Cloudenary", "Docker", "Nginx", "PM2"],
+    technologies: ["AWS EC2", "Cloudenary", "Docker", "Nginx", "PM2", "Vercel"],
     details:
       "I deploy apps, configure servers, and offer ongoing support to keep everything running efficiently.",
   },
