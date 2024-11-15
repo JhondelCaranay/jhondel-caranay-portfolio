@@ -3,10 +3,10 @@ import { Suspense } from "react";
 import { About } from "@/components/about/about";
 import { Banner } from "@/components/banner/banner";
 import { WorkExperiences } from "@/components/experience/work-experiences";
-import { Leftside } from "@/components/left-side";
+import { LeftSide } from "@/components/left-side";
 import { Navbar } from "@/components/navbar";
 import { Projects } from "@/components/projects/projects";
-import { RightSided } from "@/components/right-side";
+import { RightSide } from "@/components/right-side";
 import { Services } from "@/components/services/services";
 import { Contact } from "@/components/contact/contact";
 
@@ -16,7 +16,7 @@ export default function Home() {
       <Navbar />
 
       <div className="h-[88vh] w-full items-center justify-between gap-20 xl:flex">
-        <Leftside />
+        <LeftSide />
         <div className="mx-auto h-[88vh] w-full max-w-container p-4">
           <Banner />
           <About />
@@ -27,7 +27,7 @@ export default function Home() {
           <Services />
           <Contact />
         </div>
-        <RightSided />
+        <RightSide />
       </div>
     </div>
   );

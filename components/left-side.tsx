@@ -1,7 +1,7 @@
 import { socialAccounts } from "@/utils/data";
 import * as motion from "framer-motion/client";
 
-export const Leftside = () => {
+export const LeftSide = () => {
   return (
     <motion.div
       className="fixed bottom-0 left-0 hidden h-full w-32 xl:inline-flex"
