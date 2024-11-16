@@ -37,7 +37,7 @@ export const WorkExperiences = () => {
       variants={parentVariants}
       initial="hidden"
       animate={mainControls}
-      className="mx-auto max-w-container px-4 py-10 lgl:px-20 lgl:py-24"
+      className="mx-auto max-w-container overflow-x-clip px-4 py-10 lgl:px-20 lgl:py-24"
     >
       <SectionTitle title="Experience" titleNumber="II" />
       <div className="mt-10 flex w-full flex-col gap-8 md:flex-row">
@@ -53,10 +53,9 @@ export const WorkExperiences = () => {
 };
 
 const parentVariants: Variants = {
-  hidden: { opacity: 0, x: 200 },
+  hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    x: 0,
     transition: { delay: 0.3, type: "spring", stiffness: 100, damping: 20 },
   },
 };

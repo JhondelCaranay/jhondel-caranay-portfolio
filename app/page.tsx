@@ -13,7 +13,7 @@ import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
-    <div className="scrollbar scrollbar-track-colorDark/20 scrollbar-thumb-colorDark/60 h-screen max-h-screen w-full overflow-y-auto overflow-x-hidden scroll-smooth bg-gradient-to-r from-bodyColor via-bodyColor to-indigo-950 font-bodyFont text-colorLight">
+    <div className="h-screen max-h-screen w-full overflow-y-auto overflow-x-hidden scroll-smooth bg-gradient-to-r from-bodyColor via-bodyColor to-indigo-950 font-bodyFont text-colorLight scrollbar scrollbar-track-colorDark/20 scrollbar-thumb-colorDark/60">
       <Navbar />
 
       <div className="h-[88vh] w-full items-center justify-between gap-20 xl:flex">
