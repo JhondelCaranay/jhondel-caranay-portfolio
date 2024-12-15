@@ -169,26 +169,26 @@ export const projects: ProjectType[] = [
     codeUrl: "https://github.com/JhondelCaranay/next-ts-messenger-clone",
     liveUrl: "",
   },
-  {
-    id: "5",
-    type: "Personal Project",
-    title: "Finance Management System",
-    content:
-      "A web-based finance management system designed to help users efficiently track and manage their income, expenses, budgets, and financial goals, with features like expense categorization, budget planning, and transaction history.",
-    image: "/images/finance-system.png",
-    techstack: [
-      "Next Js",
-      "Shadcn UI",
-      "Tailwind",
-      "Clerk",
-      "Zustand",
-      "Drizzle",
-      "PostgreSQL",
-      "Hono",
-    ],
-    codeUrl: "https://github.com/JhondelCaranay/finance-project-nextjs",
-    liveUrl: "",
-  },
+  // {
+  //   id: "5",
+  //   type: "Personal Project",
+  //   title: "Finance Management System",
+  //   content:
+  //     "A web-based finance management system designed to help users efficiently track and manage their income, expenses, budgets, and financial goals, with features like expense categorization, budget planning, and transaction history.",
+  //   image: "/images/finance-system.png",
+  //   techstack: [
+  //     "Next Js",
+  //     "Shadcn UI",
+  //     "Tailwind",
+  //     "Clerk",
+  //     "Zustand",
+  //     "Drizzle",
+  //     "PostgreSQL",
+  //     "Hono",
+  //   ],
+  //   codeUrl: "https://github.com/JhondelCaranay/finance-project-nextjs",
+  //   liveUrl: "",
+  // },
 ];
 
 // const services = [
