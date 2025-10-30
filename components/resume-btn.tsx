@@ -2,7 +2,7 @@ import * as motion from "framer-motion/client";
 
 export const ResumeBtn = () => {
   return (
-    <a href="jhondel-delicona-caranay.pdf" target="_blank">
+    <a href="jhondel-delicona-caranay-cv2.pdf" target="_blank">
       <motion.button
         className="rounded-md border border-colorPrimary px-4 py-2 text-[13px] text-colorPrimary hover:bg-HoverColor"
         variants={{
