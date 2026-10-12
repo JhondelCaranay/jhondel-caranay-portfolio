@@ -6,14 +6,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - `npm run dev` — start the dev server at http://localhost:3000
 - `npm run build` — production build (also the main type-check, since there is no separate `tsc` script)
-- `npm run lint` — ESLint (`next/core-web-vitals` + `next/typescript`)
+- `npm run lint` — ESLint 9 flat config (`eslint.config.mjs`, extends `eslint-config-next` core-web-vitals + typescript). `next lint` no longer exists in Next 16.
 - `npx prettier --write <file>` — format; `prettier-plugin-tailwindcss` sorts Tailwind classes
 
 There is no test suite.
 
 ## Architecture
 
-This is a single-page personal portfolio built with Next.js 15 (App Router), React 18, TypeScript, Tailwind CSS 3, and Framer Motion. It is deployed on Vercel.
+This is a single-page personal portfolio built with Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS 3, and Framer Motion. It is deployed on Vercel.
 
 - **One route.** `app/page.tsx` stacks every section (Banner, About, WorkExperiences, Projects, Services, Contact, Footer) inside one scroll container, with fixed `LeftSide`/`RightSide` rails. The `div` in `page.tsx` handles scrolling, not `window`. Navigation uses in-page anchors: each section's root element has an `id` that must match `utils/nav-links.ts`.
 - **Content is data-driven.** All copy lives in `utils/data.tsx`: typewriter lines, skill lists, social links, work experience, projects, and services. Their shapes are defined in `utils/types.ts`. To add or edit a project, job, or service, edit `data.tsx`, not the components. Project images go in `public/images/` and are referenced as `/images/...`.
