@@ -15,24 +15,17 @@ export const Banner = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  // Entrance animations are plain CSS so the text paints before hydration
+  // (Framer Motion's initial="hidden" kept it invisible until JS loaded).
   return (
-    <motion.div
+    <div
       id="home"
       className="mx-auto flex max-w-contentContainer flex-col gap-4 py-10 mdl:px-10 mdl:py-24 lgl:gap-8 xl:px-4"
-      variants={bannerVariants}
-      initial="hidden"
-      animate="visible"
     >
-      <motion.h3
-        className="text-colorPrimary font-titleFont text-lg tracking-wide"
-        variants={bannerItemVariants}
-      >
+      <p className="font-titleFont text-lg tracking-wide text-colorPrimary motion-safe:animate-fadeUp">
         Hi, my name is
-      </motion.h3>
-      <motion.h1
-        className="flex flex-col font-titleFont text-2xl font-semibold lg:text-4xl"
-        variants={bannerItemVariants}
-      >
+      </p>
+      <h1 className="flex flex-col font-titleFont text-2xl font-semibold motion-safe:animate-fadeUp motion-safe:[animation-delay:100ms] lg:text-4xl">
         Jhondel Delicona Caranay
         <span>
           <TypewriterComponent
@@ -46,80 +39,34 @@ export const Banner = () => {
             }
           />
         </span>
-      </motion.h1>
-      <motion.p
-        className="text-base font-medium text-colorDark md:max-w-[650px]"
-        variants={bannerItemVariants}
-      >
+      </h1>
+      <p className="text-base font-medium text-colorDark motion-safe:animate-fadeUp motion-safe:[animation-delay:200ms] md:max-w-[650px]">
         I am a skilled Web Developer proficient in React, Next.js, Express, and
         TypeScript. Experienced in creating responsive, user-friendly
         applications with a focus on clean code and effective problem-solving.
         Seeking opportunities to contribute my expertise in a dynamic
         development role.
         <a href="#about">
-          <span className="text-colorPrimary group relative block h-7 w-fit cursor-pointer overflow-x-hidden">
+          <span className="group relative block h-7 w-fit cursor-pointer overflow-x-hidden text-colorPrimary">
             Learn more
-            <span className="bg-colorPrimary text-colorPrimary absolute bottom-1 left-0 h-[1px] w-full -translate-x-full transform transition-transform duration-300 ease-in-out group-hover:translate-x-0"></span>
+            <span className="absolute bottom-1 left-0 h-[1px] w-full -translate-x-full transform bg-colorPrimary text-colorPrimary transition-transform duration-300 ease-in-out group-hover:translate-x-0"></span>
           </span>
         </a>
-      </motion.p>
-      <a href="#projects">
+      </p>
+      <a href="#projects" className="w-fit motion-safe:animate-popIn">
         <motion.button
-          className="border-colorPrimary text-colorPrimary h-14 w-52 rounded-md border font-titleFont text-sm tracking-wide duration-300 hover:bg-HoverColor"
+          className="h-14 w-52 rounded-md border border-colorPrimary font-titleFont text-sm tracking-wide text-colorPrimary duration-300 hover:bg-HoverColor"
           variants={buttonVariants}
           whileHover="hover"
-          initial="hidden"
-          animate="visible"
         >
           Check out my Project!
         </motion.button>
       </a>
-    </motion.div>
+    </div>
   );
 };
 
-const bannerVariants: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 20,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      when: "beforeChildren",
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const bannerItemVariants: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 20,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-    },
-  },
-};
-
 const buttonVariants: Variants = {
-  hidden: {
-    opacity: 0,
-    scale: 0.6,
-  },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      delay: 1,
-      bounce: 1,
-    },
-  },
   hover: {
     scale: 1.1,
     textShadow: "0px 0px 8px rgb(255,255,255)",

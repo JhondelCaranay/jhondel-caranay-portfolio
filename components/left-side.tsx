@@ -12,7 +12,13 @@ export const LeftSide = () => {
       <div className="flex h-full w-full flex-col items-center justify-end gap-4 text-colorLight">
         <div className="flex flex-col gap-4 px-1">
           {socialAccounts.map((item, index) => (
-            <a key={index} href={item.link} target="_blank">
+            <a
+              key={index}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={item.name}
+            >
               <span className="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-HoverColor text-xl transition-all duration-300 hover:-translate-y-2 hover:text-colorPrimary hover:shadow-BoxShadowGlow hover:drop-shadow-dropShadowGlow">
                 <item.icon className="text-2xl" />
               </span>

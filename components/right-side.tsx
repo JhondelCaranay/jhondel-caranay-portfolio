@@ -22,7 +22,7 @@ export const RightSide = () => {
           rel="noopener noreferrer"
           > */}
         <p className="w-72 -translate-y-28 rotate-90 text-sm tracking-wide text-colorPrimary hover:drop-shadow-dropShadowGlow">
-          <a href={`mailto:${gmail}`}>{gmail}</a>
+          {gmail && <a href={`mailto:${gmail}`}>{gmail}</a>}
         </p>
         <span className="inline-flex h-32 w-[2px] bg-colorDark"></span>
       </div>

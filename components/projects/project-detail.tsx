@@ -48,11 +48,12 @@ export const ProjectDetail = ({ data }: Props) => {
             width={800}
             height={600}
             src={data.image}
-            alt=""
+            alt={`${data.title} screenshot`}
+            sizes="(min-width: 1280px) 50vw, 100vw"
             className="h-full w-full rounded-md object-cover"
           />
           {/* </Link> */}
-          <div className="bg-colorPrimary/10 absolute left-0 top-0 size-full rounded-lg duration-300 group-hover:bg-transparent"></div>
+          <div className="absolute left-0 top-0 size-full rounded-lg bg-colorPrimary/10 duration-300 group-hover:bg-transparent"></div>
         </motion.div>
 
         {/* content */}
@@ -79,7 +80,7 @@ export const ProjectDetail = ({ data }: Props) => {
             <h3 className="text-lg font-bold md:text-2xl">{data.title}</h3>
             <p
               className={clsx(
-                "text-colorPrimary font-titleFont text-xs tracking-wide md:text-base",
+                "font-titleFont text-xs tracking-wide text-colorPrimary md:text-base",
                 // position === "right" ? "text-start" : "text-end",
               )}
             >
@@ -103,7 +104,9 @@ export const ProjectDetail = ({ data }: Props) => {
               <Link
                 href={data.codeUrl}
                 target="_blank"
-                className="hover:text-colorPrimary duration-300"
+                rel="noopener noreferrer"
+                aria-label={`${data.title} source code`}
+                className="duration-300 hover:text-colorPrimary"
               >
                 <TbBrandGithub />
               </Link>
@@ -112,7 +115,9 @@ export const ProjectDetail = ({ data }: Props) => {
               <Link
                 href={data.liveUrl}
                 target="_blank"
-                className="hover:text-colorPrimary duration-300"
+                rel="noopener noreferrer"
+                aria-label={`${data.title} live demo`}
+                className="duration-300 hover:text-colorPrimary"
               >
                 <RxOpenInNewWindow />
               </Link>

@@ -34,6 +34,20 @@ const config: Config = {
         navbarShadow: "0px 10px 30px -10px rgba(2,12,27,0.7)",
         BoxShadowGlow: "0px 0px 8px rgb(255,255,255)",
       },
+      keyframes: {
+        fadeUp: {
+          from: { opacity: "0", transform: "translateY(20px)" },
+          to: { opacity: "1", transform: "none" },
+        },
+        popIn: {
+          from: { opacity: "0", transform: "scale(0.6)" },
+          to: { opacity: "1", transform: "none" },
+        },
+      },
+      animation: {
+        fadeUp: "fadeUp 0.5s ease-out both",
+        popIn: "popIn 0.4s ease-out 1s both",
+      },
       dropShadow: {
         dropShadowGlow: "0px 0px 8px rgb(255,255,255)",
       },

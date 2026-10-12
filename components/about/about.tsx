@@ -57,12 +57,13 @@ export const About = () => {
               <Image
                 src={meImg}
                 className="h-full w-full rounded-lg object-cover"
-                alt="profile image"
+                alt="Jhondel Caranay"
+                sizes="(min-width: 1024px) 33vw, 100vw"
               />
-              <div className="bg-colorPrimary/20 absolute left-0 top-0 hidden h-80 w-full rounded-md duration-300 group-hover:bg-transparent lgl:inline-block"></div>
+              <div className="absolute left-0 top-0 hidden h-80 w-full rounded-md bg-colorPrimary/20 duration-300 group-hover:bg-transparent lgl:inline-block"></div>
             </div>
           </div>
-          <div className="border-colorPrimary hidden h-80 w-full rounded-md border-2 transition-transform duration-300 group-hover:-translate-x-2 group-hover:-translate-y-2 lgl:inline-flex" />
+          <div className="hidden h-80 w-full rounded-md border-2 border-colorPrimary transition-transform duration-300 group-hover:-translate-x-2 group-hover:-translate-y-2 lgl:inline-flex" />
         </div>
       </div>
     </motion.div>

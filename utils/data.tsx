@@ -50,22 +50,27 @@ export const others = [
 
 export const socialAccounts = [
   {
+    name: "GitHub",
     link: process.env.NEXT_PUBLIC_SOCIAL_GITHUB_LINK,
     icon: TbBrandGithub,
   },
   {
+    name: "Upwork",
     link: process.env.NEXT_PUBLIC_SOCIAL_UPWORK_LINK,
     icon: SiUpwork,
   },
   {
+    name: "Facebook",
     link: process.env.NEXT_PUBLIC_SOCIAL_FACEBOOK_LINK,
     icon: SlSocialFacebook,
   },
   {
+    name: "LinkedIn",
     link: process.env.NEXT_PUBLIC_SOCIAL_LINKEDIN_LINK,
     icon: SlSocialLinkedin,
   },
-];
+  // Skip accounts whose env var is unset so no empty <a> tags render.
+].filter((account) => account.link);
 
 export const workExperiences: WorkExperience[] = [
   {
