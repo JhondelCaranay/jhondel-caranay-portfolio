@@ -75,31 +75,58 @@ export const socialAccounts = [
 export const workExperiences: WorkExperience[] = [
   {
     id: "1",
-    jobTitle: "Junior Programmer",
-    company: "Lloyd Laboratories Inc",
-    year: "FEB 2024 - SEP 2024",
-    type: "Onsite",
+    jobTitle: "Junior Web Developer",
+    company: "Blue Wolf Solution",
+    year: "JAN 2025 - AUG 2025",
+    type: "Remote",
     description:
-      "I maintain the web-based HR system and migrate features from VB.NET to Node.js and React.</>Worked with Express.js, Socket.IO, SQL Server, React, Redux, and Ant Design to develop and maintain web applications.</>Conducted data correction and encoding tasks in the manufacturing system using SQL Server to maintain data accuracy and integrity.",
+      "Designed and built a custom construction project management system with integrated payroll from the ground up using Laravel and React.</>Maintained and improved a PHP-based pharmacy management system, diagnosing and fixing bugs to keep it stable.</>Developed and maintained client WordPress websites, handling content management, blog updates, site enhancements, and ongoing maintenance.</>Tech: Laravel, React, PHP, MySQL, Tailwind CSS, WordPress",
   },
   {
     id: "2",
-    jobTitle: "React Developer OJT",
-    company: "SPEDI",
-    year: "SEP 2022 - JAN 2023",
+    jobTitle: "Junior Programmer",
+    company: "Lloyds Laboratories, Inc.",
+    year: "FEB 2024 - SEP 2024",
+    type: "Onsite",
+    description:
+      "Primarily responsible for migrating an enterprise HR system's modules and features from a legacy VB.NET application to React and Express.js, preserving compatibility, performance, and stability.</>Maintained and continuously enhanced the HR system throughout the migration, keeping it reliable for day-to-day operations.</>Collaborated with the development team to implement, test, and maintain new application features.</>Tech: React, Redux, Express.js, Socket.IO, Microsoft SQL Server, Ant Design",
+  },
+  {
+    id: "3",
+    jobTitle: "Web Developer Intern (OJT)",
+    company: "SPEDI Construction, Inc.",
+    year: "OCT 2022 - JAN 2023",
     type: "Remote",
     description:
-      "As an OJT, I actively contributed to enhancing an existing inventory management system by developing new features and optimizing transaction handling.</>Worked with Laravel, MySQL, React, Redux, and React Bootstrap to develop and maintain web applications.",
+      "Implemented new features, resolved issues, and improved the overall functionality of an existing warehouse inventory management system.</>Built responsive, maintainable interface components within the existing codebase.</>Tech: Laravel, React, Redux, MySQL, React Bootstrap",
   },
 ];
 
 export const projects: ProjectType[] = [
   {
     id: "1",
+    type: "Personal Project",
+    title: "Kalakore - Wholesale Distribution ERP",
+    content:
+      "Kalakore is a wholesale distribution ERP that brings inventory, purchasing, sales, and supplier records into one system. It tracks every stock movement and business transaction, so wholesale businesses can run day-to-day operations from a single, accurate set of records.",
+    image: "/images/wholesale-erp-system.png",
+    techstack: [
+      "Express js",
+      "React vite",
+      "Shadcn UI",
+      "Tailwind",
+      "Drizzle",
+      "PostgreSQL",
+    ],
+    codeUrl: "",
+    liveUrl: "",
+  },
+  {
+    id: "2",
     type: "Freelance Project",
     title: "Alumni System",
     content:
-      "The platform connects alumni and teachers, offering communication, announcements, job postings, and profile updates, with PESO managing job opportunities for employment support.",
+      "A platform that keeps alumni connected with their former teachers through real-time communication, announcements, and job postings. Alumni keep their profiles up to date, while the Public Employment Service Office (PESO) posts job openings to help graduates find work.",
     image: "/images/alumni-system.png",
     techstack: [
       "Next Js",
@@ -116,11 +143,11 @@ export const projects: ProjectType[] = [
     liveUrl: "",
   },
   {
-    id: "2",
+    id: "3",
     type: "Freelance Project",
     title: "Pet Adoption System",
     content:
-      "The project aims to build a platform where users can browse pets, submit adoption requests, and schedule interviews upon request approval to complete the adoption process.",
+      "A pet adoption platform that covers the full adoption process. Users browse available pets and submit adoption requests; once a request is approved, they schedule an interview to complete the adoption.",
     image: "/images/pet-adoption.png",
     techstack: [
       "Nest Js",
@@ -135,11 +162,11 @@ export const projects: ProjectType[] = [
     liveUrl: "",
   },
   {
-    id: "3",
+    id: "4",
     type: "Capstone",
     title: "Warehouse Inventory System",
     content:
-      "A web-based Inventory Management System designed to oversee warehouse products and transactions effectively.",
+      "My capstone project: a web-based inventory management system for a warehouse. It keeps track of every product in stock and records the transactions that move items in and out.",
     image: "/images/inventory-spedi.jpg",
     techstack: [
       "Nest Js",
@@ -155,11 +182,11 @@ export const projects: ProjectType[] = [
     liveUrl: "",
   },
   {
-    id: "4",
+    id: "5",
     type: "Personal Project",
     title: "Real-Time Chat Application",
     content:
-      "A web-based chat application designed to facilitate seamless, real-time communication between users with features like direct messaging, group chats, and media sharing",
+      "A Messenger-style chat app with direct messages, group chats, and media sharing. Messages appear instantly for everyone in the conversation, with no page refresh needed.",
     image: "/images/messenger-clone.png",
     techstack: [
       "NextJS",
@@ -174,53 +201,10 @@ export const projects: ProjectType[] = [
     codeUrl: "https://github.com/JhondelCaranay/next-ts-messenger-clone",
     liveUrl: "",
   },
-  // {
-  //   id: "5",
-  //   type: "Personal Project",
-  //   title: "Finance Management System",
-  //   content:
-  //     "A web-based finance management system designed to help users efficiently track and manage their income, expenses, budgets, and financial goals, with features like expense categorization, budget planning, and transaction history.",
-  //   image: "/images/finance-system.png",
-  //   techstack: [
-  //     "Next Js",
-  //     "Shadcn UI",
-  //     "Tailwind",
-  //     "Clerk",
-  //     "Zustand",
-  //     "Drizzle",
-  //     "PostgreSQL",
-  //     "Hono",
-  //   ],
-  //   codeUrl: "https://github.com/JhondelCaranay/finance-project-nextjs",
-  //   liveUrl: "",
-  // },
 ];
 
-// const services = [
-//   {
-//     title: "Full-Stack Web Development",
-//     // icon: <Code className="h-12 w-12 text-indigo-500" />,
-//     description: "Build custom web applications from start to finish, handling both the frontend (user interface) and backend (server and database).",
-//     technologies: ["MERN stack", "Next.js", "Laravel", "SQL Server", "MySQL"],
-//     details: "I create responsive, reliable apps tailored to your needs, including setup, design, and deployment."
-//   },
-//   {
-//     title: "Application Deployment and Maintenance",
-//     // icon: <Cloud className="h-12 w-12 text-sky-500" />,
-//     description: "Set up and maintain applications on cloud platforms for smooth performance.",
-//     technologies: ["AWS EC2", "S3", "Docker", "Nginx", "PM2"],
-//     details: "I deploy apps, configure servers, and offer ongoing support to keep everything running efficiently."
-//   },
-//   {
-//     title: "Database Management and Optimization",
-//     // icon: <Database className="h-12 w-12 text-emerald-500" />,
-//     description: "Design and manage databases to ensure fast and secure data handling.",
-//     technologies: ["SQL Server", "MySQL", "Prisma"],
-//     details: "I handle database setup, data corrections, and optimization to keep applications performing well and data secure."
-//   }
-// ]
 import { BsCode, BsDatabase, BsCloud } from "react-icons/bs";
-// className="h-12 w-12 text-indigo-500"
+
 export const services: ServiceType[] = [
   {
     id: "1",
@@ -267,26 +251,3 @@ export const services: ServiceType[] = [
       "I handle database setup, data corrections, and optimization to keep applications performing well and data secure.",
   },
 ];
-// const services = [
-//   {
-//     title: "Full-Stack Web Development",
-//     // icon: <Code className="h-12 w-12 text-indigo-500" />,
-//     description: "Build custom web applications from start to finish, handling both the frontend (user interface) and backend (server and database).",
-//     technologies: ["MERN stack", "Next.js", "Laravel", "SQL Server", "MySQL"],
-//     details: "I create responsive, reliable apps tailored to your needs, including setup, design, and deployment."
-//   },
-//   {
-//     title: "Application Deployment and Maintenance",
-//     // icon: <Cloud className="h-12 w-12 text-sky-500" />,
-//     description: "Set up and maintain applications on cloud platforms for smooth performance.",
-//     technologies: ["AWS EC2", "S3", "Docker", "Nginx", "PM2"],
-//     details: "I deploy apps, configure servers, and offer ongoing support to keep everything running efficiently."
-//   },
-//   {
-//     title: "Database Management and Optimization",
-//     // icon: <Database className="h-12 w-12 text-emerald-500" />,
-//     description: "Design and manage databases to ensure fast and secure data handling.",
-//     technologies: ["SQL Server", "MySQL", "Prisma"],
-//     details: "I handle database setup, data corrections, and optimization to keep applications performing well and data secure."
-//   }
-// ]
