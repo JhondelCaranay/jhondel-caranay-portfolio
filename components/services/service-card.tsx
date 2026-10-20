@@ -1,6 +1,4 @@
 import { ServiceType } from "@/utils/types";
-// import { FaRegFolder } from "react-icons/fa";
-// import { RxOpenInNewWindow } from "react-icons/rx";
 
 type Props = {
   data: ServiceType;
@@ -8,34 +6,41 @@ type Props = {
 
 export const ServiceCard = ({ data }: Props) => {
   return (
-    <div className="group flex h-96 w-full flex-col justify-center gap-6 rounded-lg bg-[#112240] p-7 transition-transform duration-300 hover:translate-y-2">
-      <div className="flex items-center justify-center">
-        {/* <FaRegFolder className="text-colorPrimary text-4xl" /> */}
-        {/* <RxOpenInNewWindow className="hover:text-colorPrimary text-4xl" /> */}
-        {<data.icon className="group-hover:text-colorPrimary text-4xl" />}
+    <div className="group flex h-full w-full flex-col gap-5 rounded-lg border border-transparent bg-[#112240] p-7 transition-all duration-300 hover:-translate-y-2 hover:border-colorPrimary/40 hover:shadow-lg hover:shadow-colorPrimary/10">
+      {/* icon + number */}
+      <div className="flex items-start justify-between">
+        <div className="flex size-14 items-center justify-center rounded-md bg-colorPrimary/10 text-colorPrimary duration-300 group-hover:bg-colorPrimary/20">
+          <data.icon className="text-3xl" />
+        </div>
+        <span className="font-titleFont text-sm tracking-widest text-colorDark">
+          {data.id.padStart(2, "0")}
+        </span>
       </div>
 
-      <div className="">
-        <h2 className="group-hover:text-colorPrimary text-center font-titleFont text-xl font-semibold tracking-wide">
+      <div>
+        <h3 className="font-titleFont text-xl font-semibold tracking-wide duration-300 group-hover:text-colorPrimary">
           {data.title}
-        </h2>
-        <p className="mt-3 text-center text-sm">{data.description}</p>
+        </h3>
+        <p className="mt-3 text-sm leading-relaxed text-colorDark">
+          {data.description}
+        </p>
       </div>
 
-      <ul className="flex flex-wrap items-center justify-center gap-2 text-xs text-colorDark mdl:text-sm">
+      <p className="border-l-2 border-colorPrimary/60 pl-3 text-sm leading-relaxed">
+        {data.details}
+      </p>
+
+      {/* tags sit at the bottom so cards line up */}
+      <ul className="mt-auto flex flex-wrap gap-2 pt-2 font-titleFont text-xs tracking-wide">
         {data.technologies.map((tech) => (
           <li
             key={tech}
-            className="text-colorPrimary bg-colorPrimary/10 hover:bg-colorPrimary/20 rounded-md px-2 py-1"
+            className="rounded-md bg-colorPrimary/10 px-2 py-1 text-colorPrimary"
           >
             {tech}
           </li>
         ))}
       </ul>
-
-      <p className="bg-colorPrimary/10 rounded-md p-1 text-center text-xs">
-        {data.details}
-      </p>
     </div>
   );
 };

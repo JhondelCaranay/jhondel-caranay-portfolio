@@ -15,6 +15,7 @@ export type ProjectType = {
   title: string;
   content: string;
   image: string;
+  video?: string;
   techstack: string[];
   liveUrl: string;
   codeUrl: string;

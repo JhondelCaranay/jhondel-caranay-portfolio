@@ -44,14 +44,28 @@ export const ProjectDetail = ({ data }: Props) => {
           animate={imageControls}
         >
           {/* <Link href={data.liveUrl} target="_blank"> */}
-          <Image
-            width={800}
-            height={600}
-            src={data.image}
-            alt={`${data.title} screenshot`}
-            sizes="(min-width: 1280px) 50vw, 100vw"
-            className="h-full w-full rounded-md object-cover"
-          />
+          {data.video ? (
+            <video
+              src={data.video}
+              poster={data.image}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-label={`${data.title} demo`}
+              className="h-full w-full rounded-md object-cover"
+            />
+          ) : (
+            <Image
+              width={800}
+              height={600}
+              src={data.image}
+              alt={`${data.title} screenshot`}
+              sizes="(min-width: 1280px) 50vw, 100vw"
+              className="h-full w-full rounded-md object-cover"
+            />
+          )}
           {/* </Link> */}
           <div className="absolute left-0 top-0 size-full rounded-lg bg-colorPrimary/10 duration-300 group-hover:bg-transparent"></div>
         </motion.div>
@@ -74,7 +88,7 @@ export const ProjectDetail = ({ data }: Props) => {
           <div
             className={clsx(
               "flex w-full flex-col justify-start",
-              position === "right" && "flex-row-reverse",
+              position === "right" ? "flex-row-reverse xl:pl-16" : "xl:pr-16",
             )}
           >
             <h3 className="text-lg font-bold md:text-2xl">{data.title}</h3>

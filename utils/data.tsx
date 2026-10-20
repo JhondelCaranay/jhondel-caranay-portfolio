@@ -42,7 +42,7 @@ export const database = ["Mongo DB", "MySQl", "PostgreSQL", "SQL server"];
 export const others = [
   "Github",
   "Docker",
-  "Cloudenary",
+  "Cloudinary",
   "Firebase Storage",
   "AWS EC2",
   "Vercel",
@@ -110,6 +110,7 @@ export const projects: ProjectType[] = [
     content:
       "A full-stack ERP for Philippine wholesale distributors, built solo: purchasing and supplier canvassing, multi-warehouse inventory, sales from quotation to invoice, a multi-terminal POS, receivables and payables, and double-entry accounting where every document posts its own journal entry. Built to BIR rules (RMO 24-2023) with X and Z readings, BIR reports and books of accounts, plus role-based access, a full audit log and about 6,000 automated tests.",
     image: "/images/wholesale-erp-system.png",
+    video: "/videos/kalakore-promo-80s.mp4",
     techstack: [
       "Express.js",
       "TypeScript",
@@ -217,43 +218,36 @@ export const services: ServiceType[] = [
     title: "Full-Stack Web Development",
     icon: BsCode,
     description:
-      "Build custom web applications from start to finish, handling both the frontend and backend.",
-    technologies: [
-      "React Js",
-      "Express Js",
-      "Nest Js",
-      "Next Js",
-      "Hono",
-      "PHP",
-    ],
+      "Custom web applications built end to end, from the database and API to a fast, responsive interface.",
+    technologies: ["React", "Next.js", "Express", "NestJS", "Hono", "PHP"],
     details:
-      "I create responsive, reliable apps tailored to your needs, including setup, design, and deployment.",
+      "Business systems such as ERPs, POS and dashboards, with role-based access, audit trails and automated tests.",
   },
   {
     id: "2",
-    title: "Application Deployment and Maintenance",
-    icon: BsDatabase,
+    title: "Deployment and Maintenance",
+    icon: BsCloud,
     description:
-      "Set up and maintain applications on cloud platforms for smooth performance.",
-    technologies: ["AWS EC2", "Cloudenary", "Docker", "Nginx", "PM2", "Vercel"],
+      "Getting your app into production and keeping it fast, stable and up to date after launch.",
+    technologies: ["AWS EC2", "Docker", "Nginx", "PM2", "Vercel", "Cloudinary"],
     details:
-      "I deploy apps, configure servers, and offer ongoing support to keep everything running efficiently.",
+      "Server setup, containers, reverse proxies, environment configuration and ongoing support.",
   },
   {
     id: "3",
-    title: "Database Management and Optimization",
-    icon: BsCloud,
+    title: "Database Design and Optimization",
+    icon: BsDatabase,
     description:
-      "Design and manage databases to ensure fast and secure data handling.",
+      "Data models that stay fast, consistent and secure as your business grows.",
     technologies: [
-      "SQL Server",
-      "MySQL",
       "PostgreSQL",
-      "Mongo DB",
+      "MySQL",
+      "SQL Server",
+      "MongoDB",
       "Prisma",
       "Drizzle",
     ],
     details:
-      "I handle database setup, data corrections, and optimization to keep applications performing well and data secure.",
+      "Schema design, migrations, indexing, query tuning and data clean-up.",
   },
 ];
