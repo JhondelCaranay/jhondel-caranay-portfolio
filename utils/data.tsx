@@ -116,7 +116,7 @@ export const projects: ProjectType[] = [
     type: "Personal Project",
     title: "Kalakore - Wholesale Distribution ERP and BIR-Ready POS",
     content:
-      "A full-stack ERP for Philippine wholesale distributors, built solo: purchasing and supplier canvassing, multi-warehouse inventory, sales from quotation to invoice, a multi-terminal POS, receivables and payables, and double-entry accounting where every document posts its own journal entry. Built to BIR rules (RMO 24-2023) with X and Z readings, BIR reports and books of accounts, plus role-based access, a full audit log and about 6,000 automated tests.",
+      "A full-stack ERP for Philippine wholesale distributors, built solo: purchasing and supplier canvassing, multi-warehouse inventory, sales from quotation to invoice, a multi-terminal POS, receivables and payables, and double-entry accounting where every document posts its own journal entry. Built to BIR rules (RMO 24-2023) with X and Z readings, BIR reports and books of accounts, plus role-based access, a full audit log and about 5,900 automated tests.",
     image: "/images/wholesale-erp-system.png",
     video: "/videos/kalakore-promo-web.mp4",
     caseStudyUrl: "/projects/kalakore",

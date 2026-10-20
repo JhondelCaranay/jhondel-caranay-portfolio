@@ -28,7 +28,7 @@ export const About = () => {
       variants={parentVariants}
       initial="hidden"
       animate={mainControls}
-      className="mx-auto flex max-w-container flex-col gap-8 px-4 py-10 lgl:px-20 lgl:py-32"
+      className="mx-auto flex max-w-container flex-col gap-8 py-10 lgl:px-20 lgl:py-32"
     >
       <SectionTitle title="About Me" titleNumber="I" />
       <div className="flex flex-col gap-16 lgl:flex-row">
@@ -62,16 +62,16 @@ export const About = () => {
           </p>
 
           {/* highlights */}
-          <div className="mt-4 grid grid-cols-3 gap-3">
+          <div className="mt-4 grid grid-cols-3 gap-2 sml:gap-3">
             {highlights.map((item) => (
               <div
                 key={item.label}
-                className="rounded-lg border border-colorPrimary/30 p-3 text-center md:p-4"
+                className="rounded-lg border border-colorPrimary/30 px-1 py-3 text-center sml:p-3 md:p-4"
               >
-                <p className="font-titleFont text-lg font-bold text-colorPrimary md:text-3xl">
+                <p className="whitespace-nowrap font-titleFont text-sm font-bold text-colorPrimary sml:text-lg md:text-3xl lgl:text-xl xl:text-3xl">
                   {item.value}
                 </p>
-                <p className="mt-1 text-xs text-colorDark md:text-sm">
+                <p className="mt-1 text-[11px] leading-tight text-colorDark sml:text-xs md:text-sm">
                   {item.label}
                 </p>
               </div>

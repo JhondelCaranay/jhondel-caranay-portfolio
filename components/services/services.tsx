@@ -4,7 +4,7 @@ import { SectionTitle } from "../section-title";
 
 export const Services = () => {
   return (
-    <div id="services" className="mx-auto max-w-container px-4 py-24 lgl:px-20">
+    <div id="services" className="mx-auto max-w-container py-24 lgl:px-20">
       {/* titles */}
       <div className="flex w-full flex-col items-center">
         <SectionTitle title="My services" titleNumber="IV" line={false} />

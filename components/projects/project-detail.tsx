@@ -31,12 +31,12 @@ export const ProjectDetail = ({ data }: Props) => {
       <div
         className={clsx(
           "flex flex-col gap-6",
-          position === "right" ? "xl:flex-row" : "xl:flex-row-reverse",
+          position === "right" ? "lgl:flex-row" : "lgl:flex-row-reverse",
         )}
       >
         {/* image */}
         <motion.div
-          className="group relative h-auto w-full xl:w-1/2"
+          className="group relative h-auto w-full lgl:w-1/2 lgl:self-center"
           ref={imageRef}
           custom={position}
           variants={imageVariants}
@@ -57,7 +57,7 @@ export const ProjectDetail = ({ data }: Props) => {
               height={600}
               src={data.image}
               alt={`${data.title} screenshot`}
-              sizes="(min-width: 1280px) 50vw, 100vw"
+              sizes="(min-width: 1024px) 50vw, 100vw"
               className="h-full w-full rounded-md object-cover"
             />
           )}
@@ -68,10 +68,10 @@ export const ProjectDetail = ({ data }: Props) => {
         {/* content */}
         <motion.div
           className={clsx(
-            "z-10 flex h-full w-full flex-col gap-5 lgl:justify-between xl:w-1/2",
-            position === "right" ? "xl:-ml-16" : "xl:-mr-16",
-            position === "right" ? "text-right" : "text-left",
-            position === "right" ? "xl:items-end" : "xl:items-start",
+            "z-10 flex h-full w-full flex-col gap-5 lgl:w-1/2 lgl:justify-between",
+            position === "right" ? "lgl:-ml-16" : "lgl:-mr-16",
+            position === "right" && "lgl:text-right",
+            position === "right" ? "lgl:items-end" : "lgl:items-start",
           )}
           ref={contentRef}
           custom={position}
@@ -83,7 +83,7 @@ export const ProjectDetail = ({ data }: Props) => {
           <div
             className={clsx(
               "flex w-full flex-col justify-start",
-              position === "right" ? "flex-row-reverse xl:pl-16" : "xl:pr-16",
+              position === "right" ? "lgl:pl-16" : "lgl:pr-16",
             )}
           >
             <h3 className="text-lg font-bold md:text-2xl">{data.title}</h3>
@@ -97,7 +97,7 @@ export const ProjectDetail = ({ data }: Props) => {
             </p>
           </div>
 
-          <p className="rounded-md bg-[#112240] p-2 text-xs md:p-6 md:text-sm">
+          <p className="rounded-md bg-[#112240] p-4 text-sm leading-relaxed md:p-6 md:text-base">
             {data.content}
           </p>
 
@@ -106,7 +106,7 @@ export const ProjectDetail = ({ data }: Props) => {
           <div
             className={clsx(
               "flex items-center gap-4 text-2xl",
-              position === "left" ? "justify-start" : "justify-end",
+              position === "right" && "lgl:justify-end",
             )}
           >
             {data.caseStudyUrl && (

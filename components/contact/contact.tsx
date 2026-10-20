@@ -10,7 +10,9 @@ export const Contact = () => {
       <div className="flex w-full flex-col items-center">
         <SectionTitle title="Contact" titleNumber="V" line={false} />
       </div>
-      <h2 className="font-titleFont text-5xl font-semibold">Get in Touch</h2>
+      <h2 className="text-center font-titleFont text-4xl font-semibold md:text-5xl">
+        Get in Touch
+      </h2>
 
       <p className="max-w-[600px] text-center text-colorDark">
         My inbox is always open. Whether you have a question or just want to say

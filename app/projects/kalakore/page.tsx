@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ProjectVideo } from "@/components/projects/project-video";
 
 const description =
-  "How I built Kalakore on my own: a wholesale distribution ERP for Philippine distributors with a BIR-ready multi-terminal POS, double-entry accounting, a full audit trail and about 6,000 automated tests.";
+  "How I built Kalakore on my own: a wholesale distribution ERP for Philippine distributors with a BIR-ready multi-terminal POS, double-entry accounting, a full audit trail and about 5,900 automated tests.";
 
 export const metadata: Metadata = {
   title: "Kalakore case study",
@@ -21,7 +21,7 @@ const stats = [
   { value: "51", label: "API modules" },
   { value: "74", label: "Database tables" },
   { value: "8 / 287", label: "Roles / permission codes" },
-  { value: "~6,000", label: "Automated tests" },
+  { value: "~5,900", label: "Automated tests" },
 ];
 
 const techstack = [
@@ -312,7 +312,8 @@ export default function KalakoreCaseStudy() {
         <Section number="05" title="Testing">
           <p>
             Accounting software has to be right, so the API is covered by about
-            6,000 automated tests written with Vitest and Supertest.
+            5,900 automated tests written with Vitest and Supertest, including
+            every route and full business scenarios.
           </p>
           <ul className="flex flex-col gap-3">
             {testing.map((item) => (

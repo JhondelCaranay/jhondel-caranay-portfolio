@@ -6,7 +6,7 @@ type Props = {
 
 export const SectionTitle = ({ title, titleNumber, line = true }: Props) => {
   return (
-    <h2 className="flex items-center font-titleFont text-2xl font-semibold">
+    <h2 className="flex items-center font-titleFont text-2xl font-semibold md:text-3xl">
       <span className="mr-2 text-base text-colorPrimary md:text-lg">
         {titleNumber}.
       </span>{" "}

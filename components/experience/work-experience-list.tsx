@@ -21,7 +21,7 @@ export const WorkExperienceList = ({
             className={clsx(
               "cursor-pointer border-l-2 bg-transparent px-8 py-3 text-sm duration-300 hover:bg-[#112240]",
               isActive ? "border-l-colorPrimary" : "border-l-HoverColor",
-              isActive ? "text-colorPrimary" : "text-textDark",
+              isActive ? "text-colorPrimary" : "text-colorLight",
             )}
             onClick={() => handleChangeWorkExp(experience.id)}
           >

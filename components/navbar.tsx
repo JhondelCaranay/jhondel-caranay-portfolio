@@ -166,9 +166,9 @@ export const Navbar = () => {
           </motion.a>
 
           {/* nav links */}
-          <div className="hidden items-center gap-7 mdl:inline-flex">
+          <div className="hidden items-center gap-4 mdl:inline-flex lg:gap-7">
             <motion.ul
-              className="flex gap-7 text-[13px]"
+              className="flex gap-4 text-[13px] lg:gap-7"
               variants={listVariants}
               initial="hidden"
               animate="visible"

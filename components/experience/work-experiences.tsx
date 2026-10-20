@@ -37,7 +37,7 @@ export const WorkExperiences = () => {
       variants={parentVariants}
       initial="hidden"
       animate={mainControls}
-      className="mx-auto max-w-container overflow-x-clip px-4 py-10 lgl:px-20 lgl:py-24"
+      className="mx-auto max-w-container overflow-x-clip py-10 lgl:px-20 lgl:py-24"
     >
       <SectionTitle title="Experience" titleNumber="II" />
       <div className="mt-10 flex w-full flex-col gap-8 md:flex-row">

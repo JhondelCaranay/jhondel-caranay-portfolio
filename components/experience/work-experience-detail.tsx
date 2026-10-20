@@ -21,21 +21,26 @@ export const WorkExperienceDetail = ({ workExp }: Props) => {
       exit="exit"
       className="relative h-fit rounded-md border-2 border-colorPrimary p-5"
     >
-      <h3 className="flex gap-1 font-titleFont text-xl font-medium text-colorPrimary">
-        {workExp.jobTitle}
-      </h3>
+      {/* title and dates share a row so long titles push the dates instead of overlapping them */}
+      <div className="flex flex-col gap-1 md:flex-row md:items-start md:justify-between md:gap-6">
+        <div>
+          <h3 className="flex gap-1 font-titleFont text-xl font-medium text-colorPrimary">
+            {workExp.jobTitle}
+          </h3>
 
-      <p className="mt-1 text-sm font-medium text-colorDark">
-        {workExp.company}
-      </p>
+          <p className="mt-1 text-sm font-medium text-colorDark">
+            {workExp.company}
+          </p>
+        </div>
 
-      <div className="right-5 top-5 cursor-pointer duration-300 hover:text-colorPrimary md:absolute">
-        <p className="mt-1 text-xs font-medium text-colorDark">
-          {workExp.year}
-        </p>
-        <p className="mt-1 text-xs font-medium text-colorDark md:text-end">
-          {workExp.type}
-        </p>
+        <div className="shrink-0 md:text-end">
+          <p className="mt-1 text-xs font-medium text-colorDark">
+            {workExp.year}
+          </p>
+          <p className="mt-1 text-xs font-medium text-colorDark">
+            {workExp.type}
+          </p>
+        </div>
       </div>
 
       <ul className="mt-6 flex flex-col gap-3 overflow-auto p-1">
