@@ -2,11 +2,42 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { inter, montserrat } from "@/utils/fonts";
 import { Providers } from "@/providers/Providers";
+import { siteDescription, siteName, siteTitle, siteUrl } from "@/utils/site";
 
 export const metadata: Metadata = {
-  title: "jhondel delicona caranay",
-  description:
-    "I am a skilled Web Developer proficient in React, Next.js, Express, and TypeScript. Experienced in creating responsive, user-friendly applications with a focus on clean code and effective problem-solving. Seeking opportunities to contribute my expertise in a dynamic development role.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: siteTitle,
+    template: `%s | ${siteName}`,
+  },
+  description: siteDescription,
+  authors: [{ name: "Jhondel Delicona Caranay" }],
+  keywords: [
+    "Jhondel Caranay",
+    "full-stack developer",
+    "web developer Philippines",
+    "React",
+    "Next.js",
+    "Express",
+    "TypeScript",
+    "PostgreSQL",
+    "ERP",
+    "POS",
+  ],
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName,
+    title: siteTitle,
+    description: siteDescription,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+  },
 };
 
 export default function RootLayout({

@@ -3,7 +3,7 @@
 /* PACKAGES */
 import * as motion from "framer-motion/client";
 import { useMemo } from "react";
-import { Variants } from "framer-motion";
+import { AnimatePresence, Variants } from "framer-motion";
 import { useQueryState } from "nuqs";
 /* UTILS */
 import useScrollView from "@/hooks/use-scroll-view";
@@ -46,16 +46,22 @@ export const WorkExperiences = () => {
           handleChangeWorkExp={handleChangeWorkExp}
           activeWorkExp={workExp}
         />
-        <WorkExperienceDetail workExp={getActiveWorkExp} />
+        <AnimatePresence mode="wait">
+          <WorkExperienceDetail
+            key={getActiveWorkExp.id}
+            workExp={getActiveWorkExp}
+          />
+        </AnimatePresence>
       </div>
     </motion.div>
   );
 };
 
 const parentVariants: Variants = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
-    transition: { delay: 0.3, type: "spring", stiffness: 100, damping: 20 },
+    y: 0,
+    transition: { duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] },
   },
 };

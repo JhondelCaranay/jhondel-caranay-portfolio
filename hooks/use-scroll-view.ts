@@ -3,7 +3,8 @@ import { useAnimation, useInView } from "framer-motion";
 
 const useScrollView = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+  // wait until 20% is visible so elements don't flicker at the viewport edge
+  const isInView = useInView(ref, { once: false, amount: 0.2 });
   const mainControls = useAnimation();
 
   useEffect(() => {

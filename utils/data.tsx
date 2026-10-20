@@ -15,37 +15,45 @@ export const typewriterData = [
 ];
 
 export const frontend = [
-  "HTML CSS",
-  "Scss",
-  "Tailwind",
-  "React Js",
-  "Next Js",
-  "React Query",
+  "React",
+  "Next.js",
+  "TypeScript",
+  "Tailwind CSS",
+  "TanStack Query",
   "Redux",
-  "Shadcn Ui",
+  "shadcn/ui",
   "Ant Design",
-  "Material Ui",
+  "Material UI",
+  "SCSS",
 ];
 
 export const backend = [
-  "PHP",
-  "Node Js",
-  "Typescript",
-  "Nest Js",
+  "Node.js",
+  "Express",
+  "NestJS",
   "Hono",
+  "PHP",
+  "Laravel",
+  "Socket.IO",
+];
+
+export const database = [
+  "PostgreSQL",
+  "MySQL",
+  "SQL Server",
+  "MongoDB",
+  "Redis",
   "Prisma",
   "Drizzle",
 ];
 
-export const database = ["Mongo DB", "MySQl", "PostgreSQL", "SQL server"];
-
 export const others = [
-  "Github",
   "Docker",
-  "Cloudinary",
-  "Firebase Storage",
   "AWS EC2",
   "Vercel",
+  "GitHub",
+  "Cloudinary",
+  "Firebase Storage",
 ];
 
 export const socialAccounts = [
@@ -110,7 +118,8 @@ export const projects: ProjectType[] = [
     content:
       "A full-stack ERP for Philippine wholesale distributors, built solo: purchasing and supplier canvassing, multi-warehouse inventory, sales from quotation to invoice, a multi-terminal POS, receivables and payables, and double-entry accounting where every document posts its own journal entry. Built to BIR rules (RMO 24-2023) with X and Z readings, BIR reports and books of accounts, plus role-based access, a full audit log and about 6,000 automated tests.",
     image: "/images/wholesale-erp-system.png",
-    video: "/videos/kalakore-promo-80s.mp4",
+    video: "/videos/kalakore-promo-web.mp4",
+    caseStudyUrl: "/projects/kalakore",
     techstack: [
       "Express.js",
       "TypeScript",

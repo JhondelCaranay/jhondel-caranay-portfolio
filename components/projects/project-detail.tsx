@@ -12,6 +12,7 @@ import { Variants } from "framer-motion";
 import { ProjectType } from "@/utils/types";
 import { RxOpenInNewWindow } from "react-icons/rx";
 import { TechStack } from "./tech-stack";
+import { ProjectVideo } from "./project-video";
 
 type Props = {
   data: ProjectType;
@@ -45,16 +46,10 @@ export const ProjectDetail = ({ data }: Props) => {
         >
           {/* <Link href={data.liveUrl} target="_blank"> */}
           {data.video ? (
-            <video
+            <ProjectVideo
               src={data.video}
               poster={data.image}
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              aria-label={`${data.title} demo`}
-              className="h-full w-full rounded-md object-cover"
+              title={data.title}
             />
           ) : (
             <Image
@@ -114,6 +109,17 @@ export const ProjectDetail = ({ data }: Props) => {
               position === "left" ? "justify-start" : "justify-end",
             )}
           >
+            {data.caseStudyUrl && (
+              <Link
+                href={data.caseStudyUrl}
+                className="group/cs inline-flex items-center gap-2 rounded-md border border-colorPrimary px-4 py-2 font-titleFont text-sm tracking-wide text-colorPrimary duration-300 hover:bg-colorPrimary/10"
+              >
+                Read case study
+                <span className="duration-300 group-hover/cs:translate-x-1">
+                  &rarr;
+                </span>
+              </Link>
+            )}
             {data.codeUrl && (
               <Link
                 href={data.codeUrl}
@@ -143,36 +149,29 @@ export const ProjectDetail = ({ data }: Props) => {
   );
 };
 
+// short eased slide instead of a long spring so the cards glide in without overshoot
+const ease = [0.22, 1, 0.36, 1] as const;
+
 const imageVariants: Variants = {
   hidden: (position: string) => ({
     opacity: 0,
-    x: position === "right" ? -200 : 200,
+    x: position === "right" ? -60 : 60,
   }),
-  visible: () => ({
+  visible: {
     opacity: 1,
     x: 0,
-    transition: {
-      delay: 0.1,
-      type: "spring",
-      stiffness: 100,
-      damping: 20,
-    },
-  }),
+    transition: { duration: 0.8, ease },
+  },
 };
 
 const contentVariants: Variants = {
   hidden: (position: string) => ({
     opacity: 0,
-    x: position === "right" ? 200 : -200,
+    x: position === "right" ? 60 : -60,
   }),
-  visible: () => ({
+  visible: {
     opacity: 1,
     x: 0,
-    transition: {
-      delay: 0.1,
-      type: "spring",
-      stiffness: 100,
-      damping: 20,
-    },
-  }),
+    transition: { duration: 0.8, delay: 0.15, ease },
+  },
 };

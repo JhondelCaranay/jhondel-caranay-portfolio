@@ -57,7 +57,7 @@ const config: Config = {
         colorPrimary: "#38bdf8",
         colorLight: "#ccd6f6",
         colorDark: "#8892b0",
-        HoverColor: "rgba(100, 255, 218, 0.1)",
+        HoverColor: "rgba(56, 189, 248, 0.1)",
       },
     },
   },

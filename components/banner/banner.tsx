@@ -1,7 +1,6 @@
 "use client";
 
 import { typewriterData } from "@/utils/data";
-import { motion, Variants } from "framer-motion";
 import { useEffect, useState } from "react";
 import TypewriterComponent, { Options } from "typewriter-effect";
 
@@ -11,7 +10,7 @@ export const Banner = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setAutoStart(true);
-    }, 1500);
+    }, 1000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -20,60 +19,61 @@ export const Banner = () => {
   return (
     <div
       id="home"
-      className="mx-auto flex max-w-contentContainer flex-col gap-4 py-10 mdl:px-10 mdl:py-24 lgl:gap-8 xl:px-4"
+      className="mx-auto flex min-h-[calc(88vh-2rem)] max-w-contentContainer flex-col justify-center gap-5 py-10 mdl:px-10 lgl:gap-6 xl:px-4"
     >
-      <p className="font-titleFont text-lg tracking-wide text-colorPrimary motion-safe:animate-fadeUp">
+      <span className="inline-flex w-fit items-center gap-2 rounded-full border border-colorPrimary/30 bg-colorPrimary/5 px-3 py-1 font-titleFont text-xs tracking-wide text-colorPrimary motion-safe:animate-fadeUp">
+        <span className="relative flex size-2">
+          <span className="absolute inline-flex size-full rounded-full bg-colorPrimary opacity-75 motion-safe:animate-ping" />
+          <span className="relative inline-flex size-2 rounded-full bg-colorPrimary" />
+        </span>
+        Open to new opportunities
+      </span>
+
+      <p className="font-titleFont text-base tracking-wide text-colorPrimary motion-safe:animate-fadeUp motion-safe:[animation-delay:100ms] md:text-lg">
         Hi, my name is
       </p>
-      <h1 className="flex flex-col font-titleFont text-2xl font-semibold motion-safe:animate-fadeUp motion-safe:[animation-delay:100ms] lg:text-4xl">
-        Jhondel Delicona Caranay
-        <span>
-          <TypewriterComponent
-            options={
-              {
-                strings: typewriterData,
-                autoStart: autoStart,
-                loop: true,
-                pauseFor: 0,
-              } as Partial<Options>
-            }
-          />
-        </span>
+
+      <h1 className="font-titleFont text-4xl font-bold leading-tight text-colorLight motion-safe:animate-fadeUp motion-safe:[animation-delay:150ms] md:text-6xl lgl:text-7xl">
+        Jhondel Caranay.
       </h1>
-      <p className="text-base font-medium text-colorDark motion-safe:animate-fadeUp motion-safe:[animation-delay:200ms] md:max-w-[650px]">
-        I am a skilled Web Developer proficient in React, Next.js, Express, and
-        TypeScript. Experienced in creating responsive, user-friendly
-        applications with a focus on clean code and effective problem-solving.
-        Seeking opportunities to contribute my expertise in a dynamic
-        development role.
-        <a href="#about">
-          <span className="group relative block h-7 w-fit cursor-pointer overflow-x-hidden text-colorPrimary">
-            Learn more
-            <span className="absolute bottom-1 left-0 h-[1px] w-full -translate-x-full transform bg-colorPrimary text-colorPrimary transition-transform duration-300 ease-in-out group-hover:translate-x-0"></span>
-          </span>
-        </a>
+
+      {/* fixed height so wrapping lines don't push the content below */}
+      <div className="min-h-[2.6em] font-titleFont text-2xl font-semibold leading-tight text-colorDark motion-safe:animate-fadeUp motion-safe:[animation-delay:200ms] md:min-h-[1.3em] md:text-4xl lgl:text-5xl">
+        <TypewriterComponent
+          options={
+            {
+              strings: typewriterData,
+              autoStart: autoStart,
+              loop: true,
+              delay: 50,
+              deleteSpeed: 25,
+              pauseFor: 2000,
+            } as Partial<Options>
+          }
+        />
+      </div>
+
+      <p className="max-w-[40rem] text-base leading-relaxed text-colorDark motion-safe:animate-fadeUp motion-safe:[animation-delay:250ms] md:text-lg">
+        I&apos;m a full-stack web developer who builds{" "}
+        <span className="text-colorPrimary">business software</span> such as
+        ERPs, POS and inventory systems, working across React, Next.js, Express
+        and TypeScript, from the database to deployment.
       </p>
-      <a href="#projects" className="w-fit motion-safe:animate-popIn">
-        <motion.button
-          className="h-14 w-52 rounded-md border border-colorPrimary font-titleFont text-sm tracking-wide text-colorPrimary duration-300 hover:bg-HoverColor"
-          variants={buttonVariants}
-          whileHover="hover"
+
+      <div className="mt-4 flex flex-wrap gap-4 motion-safe:animate-fadeUp motion-safe:[animation-delay:350ms]">
+        <a
+          href="#projects"
+          className="rounded-md bg-colorPrimary px-7 py-4 font-titleFont text-sm font-semibold tracking-wide text-bodyColor duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-colorPrimary/30"
         >
-          Check out my Project!
-        </motion.button>
-      </a>
+          View my work
+        </a>
+        <a
+          href="#contact"
+          className="rounded-md border border-colorPrimary px-7 py-4 font-titleFont text-sm tracking-wide text-colorPrimary duration-300 hover:-translate-y-1 hover:bg-colorPrimary/10"
+        >
+          Get in touch
+        </a>
+      </div>
     </div>
   );
-};
-
-const buttonVariants: Variants = {
-  hover: {
-    scale: 1.1,
-    textShadow: "0px 0px 8px rgb(255,255,255)",
-    boxShadow: "0px 0px 8px rgb(255,255,255)",
-    transition: {
-      duration: 0.4,
-      repeat: Infinity,
-    },
-  },
 };
