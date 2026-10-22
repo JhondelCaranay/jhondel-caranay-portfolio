@@ -135,7 +135,7 @@ export const projects: ProjectType[] = [
       "Vitest",
     ],
     codeUrl: "",
-    liveUrl: "",
+    liveUrl: "https://kalakore.vercel.app",
   },
   {
     id: "2",
