@@ -139,6 +139,35 @@ export const projects: ProjectType[] = [
   },
   {
     id: "2",
+    type: "Personal Project",
+    title: "AyosDocs - Multi-Tenant Document Management SaaS",
+    content:
+      "A multi-tenant SaaS for storing and sharing documents, built solo for Philippine teams. Files are organized as workspace, projects, nested folders and documents. Each workspace has owner, admin and member roles, and each project has its own admin, editor and viewer roles. Uploads go straight from the browser to Cloudinary using signed URLs, with storage quotas, version history, activity timelines, tags and categories, Postgres full-text search, trash with retention, and expiring share links that can be password-protected. Billing runs through PayMongo Checkout on Free, Pro and Business plans, with a verified webhook, a grace period and a read-only mode, so nothing is ever deleted automatically. It also has live notifications over Socket.IO, an audit log with CSV export for Business, a platform super-admin panel, a landing and pricing page, an in-app user guide, and a test suite covering the API contracts and isolation between tenants.",
+    image: "/images/ayosdocs.png",
+    video: "",
+    caseStudyUrl: "/projects/ayosdocs",
+    techstack: [
+      "Express.js",
+      "TypeScript",
+      "React (Vite)",
+      "TanStack Router & Query",
+      "Base UI",
+      "Tailwind CSS",
+      "Drizzle ORM",
+      "PostgreSQL",
+      "Redis",
+      "Socket.IO",
+      "Cloudinary",
+      "PayMongo",
+      "Resend",
+      "Docker",
+      "Vitest",
+    ],
+    codeUrl: "",
+    liveUrl: "",
+  },
+  {
+    id: "3",
     type: "Freelance Project",
     title: "Alumni System",
     content:
@@ -159,7 +188,7 @@ export const projects: ProjectType[] = [
     liveUrl: "",
   },
   {
-    id: "3",
+    id: "4",
     type: "Freelance Project",
     title: "Pet Adoption System",
     content:
@@ -178,7 +207,7 @@ export const projects: ProjectType[] = [
     liveUrl: "",
   },
   {
-    id: "4",
+    id: "5",
     type: "Capstone",
     title: "Warehouse Inventory System",
     content:
@@ -198,7 +227,7 @@ export const projects: ProjectType[] = [
     liveUrl: "",
   },
   {
-    id: "5",
+    id: "6",
     type: "Personal Project",
     title: "Real-Time Chat Application",
     content:
