@@ -94,7 +94,7 @@ export const workExperiences: WorkExperience[] = [
     id: "2",
     jobTitle: "Junior Programmer",
     company: "Lloyds Laboratories, Inc.",
-    year: "FEB 2024 - SEP 2024",
+    year: "JAN 2024 - JAN 2025",
     type: "Onsite",
     description:
       "Primarily responsible for migrating an enterprise HR system's modules and features from a legacy VB.NET application to React and Express.js, preserving compatibility, performance, and stability.</>Maintained and continuously enhanced the HR system throughout the migration, keeping it reliable for day-to-day operations.</>Collaborated with the development team to implement, test, and maintain new application features.</>Tech: React, Redux, Express.js, Socket.IO, Microsoft SQL Server, Ant Design",
