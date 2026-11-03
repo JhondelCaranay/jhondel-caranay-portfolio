@@ -168,6 +168,35 @@ export const projects: ProjectType[] = [
   },
   {
     id: "3",
+    type: "Personal Project",
+    title: "Seroksan - Multi-Tenant Record-Tracking SaaS for Xerox Shops",
+    content:
+      "A multi-tenant SaaS for Philippine xerox shops that also sell school supplies, built solo. Staff record sales on a fast counter screen, with variant-based pricing and volume tiers, and each sale deducts supplies and consumables like paper and laminating film. Shifts compare expected against counted cash, and machine counter readings are checked against recorded pages, so unrecorded copies show up. It also handles drop-off job orders with downpayments, utang (customer credit) with partial payments, voids that need a manager's approval and stay on record, expenses, and profit and cross-branch reports. Each shop runs multiple branches with Owner, Manager and Staff roles, and staff switch in with a PIN on registered counter devices. Billing runs through PayMongo Checkout on Free, Pro and Business plans, and it installs as a PWA with live updates over Socket.IO. It's a record-keeping tool by design, not a POS, so it issues no receipts and computes no VAT.",
+    image: "/images/seroksan.png",
+    video: "",
+    caseStudyUrl: "/projects/seroksan",
+    techstack: [
+      "Express.js",
+      "TypeScript",
+      "React (Vite)",
+      "TanStack Router & Query",
+      "Base UI",
+      "Tailwind CSS",
+      "Drizzle ORM",
+      "PostgreSQL",
+      "Redis",
+      "Socket.IO",
+      "Cloudinary",
+      "PayMongo",
+      "Resend",
+      "Docker",
+      "Vitest",
+    ],
+    codeUrl: "",
+    liveUrl: "",
+  },
+  {
+    id: "4",
     type: "Freelance Project",
     title: "Alumni System",
     content:
@@ -188,7 +217,7 @@ export const projects: ProjectType[] = [
     liveUrl: "",
   },
   {
-    id: "4",
+    id: "5",
     type: "Freelance Project",
     title: "Pet Adoption System",
     content:
@@ -207,7 +236,7 @@ export const projects: ProjectType[] = [
     liveUrl: "",
   },
   {
-    id: "5",
+    id: "6",
     type: "Capstone",
     title: "Warehouse Inventory System",
     content:
@@ -227,7 +256,7 @@ export const projects: ProjectType[] = [
     liveUrl: "",
   },
   {
-    id: "6",
+    id: "7",
     type: "Personal Project",
     title: "Real-Time Chat Application",
     content:
