@@ -9,7 +9,7 @@ export const RightSide = () => {
       initial={{ opacity: 0, y: "100vh" }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
-        delay: 1.5,
+        delay: 0.8,
         type: "spring",
         stiffness: 100,
         damping: 20,

@@ -7,7 +7,7 @@ export const LeftSide = () => {
       className="fixed bottom-0 left-0 hidden h-full w-32 xl:inline-flex"
       initial={{ opacity: 0, y: "100vh" }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 1.5, type: "spring", stiffness: 100, damping: 20 }}
+      transition={{ delay: 0.8, type: "spring", stiffness: 100, damping: 20 }}
     >
       <div className="flex h-full w-full flex-col items-center justify-end gap-4 text-colorLight">
         <div className="flex flex-col gap-4 px-1">

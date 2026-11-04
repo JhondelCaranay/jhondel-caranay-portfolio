@@ -4,6 +4,7 @@
 import Image from "next/image";
 import useScrollView from "@/hooks/use-scroll-view";
 import { motion, Variants } from "framer-motion";
+import { BsDatabase, BsHddStack, BsTools, BsWindow } from "react-icons/bs";
 /* UTILS */
 import { backend, database, frontend, others } from "@/utils/data";
 import { meCutoutImg } from "@/public";
@@ -78,12 +79,15 @@ export const About = () => {
             ))}
           </div>
 
-          <p className="mt-6 text-colorPrimary">Technologies I work with:</p>
+          <h3 className="mt-6 flex items-center font-titleFont text-lg font-semibold md:text-xl">
+            Technologies I work with
+            <span className="ml-6 hidden h-[.5px] flex-1 bg-gray-700 md:inline-flex"></span>
+          </h3>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <SkillList data={frontend} title="Front-end" />
-            <SkillList data={backend} title="Back-end" />
-            <SkillList data={database} title="Database" />
-            <SkillList data={others} title="DevOps & Tools" />
+            <SkillList data={frontend} title="Front-end" icon={BsWindow} />
+            <SkillList data={backend} title="Back-end" icon={BsHddStack} />
+            <SkillList data={database} title="Database" icon={BsDatabase} />
+            <SkillList data={others} title="DevOps & Tools" icon={BsTools} />
           </div>
         </div>
         {/* right side */}

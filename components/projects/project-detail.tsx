@@ -13,6 +13,7 @@ import { ProjectType } from "@/utils/types";
 import { RxOpenInNewWindow } from "react-icons/rx";
 import { TechStack } from "./tech-stack";
 import { ProjectVideo } from "./project-video";
+import { ProjectDescription } from "./project-description";
 
 type Props = {
   data: ProjectType;
@@ -97,9 +98,7 @@ export const ProjectDetail = ({ data }: Props) => {
             </p>
           </div>
 
-          <p className="rounded-md bg-[#112240] p-4 text-sm leading-relaxed md:p-6 md:text-base">
-            {data.content}
-          </p>
+          <ProjectDescription content={data.content} />
 
           <TechStack data={data.techstack} position={position} />
 
@@ -155,7 +154,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
 const imageVariants: Variants = {
   hidden: (position: string) => ({
     opacity: 0,
-    x: position === "right" ? -60 : 60,
+    x: position === "right" ? -30 : 30,
   }),
   visible: {
     opacity: 1,
@@ -167,7 +166,7 @@ const imageVariants: Variants = {
 const contentVariants: Variants = {
   hidden: (position: string) => ({
     opacity: 0,
-    x: position === "right" ? 60 : -60,
+    x: position === "right" ? 30 : -30,
   }),
   visible: {
     opacity: 1,
