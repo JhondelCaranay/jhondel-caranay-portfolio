@@ -197,6 +197,33 @@ export const projects: ProjectType[] = [
   },
   {
     id: "4",
+    type: "Personal Project",
+    title: "PCyesa - Record-Keeping POS for a Computer Shop",
+    content:
+      "A record-keeping POS for a single computer shop, built solo, so the owner always knows what was sold, what is in stock and how the shop is doing. It covers a parts catalog with typed specs, brands and categories, stock-ins from suppliers, adjustments and a full movement history with low-stock alerts. A PC builder checks part compatibility and saves drafts and quotes, and predefined packages show their availability from current stock. The POS handles mixed carts of parts, builds, packages and service items, with discounts capped for staff unless an Owner PIN approves, split payments, downpayments and held sales. It also covers balance collection, voids, partial returns, serial lookup with warranty status, an owner dashboard with sales, best-seller, inventory and profit reports, and live sync between counters over Socket.IO. Owner and Staff roles keep cost and profit hidden from staff. It's a record-keeping tool by design, so it issues no official receipts and computes no VAT.",
+    image: "/images/pcyesa.png",
+    video: "",
+    caseStudyUrl: "/projects/pcyesa",
+    techstack: [
+      "Express.js",
+      "TypeScript",
+      "React (Vite)",
+      "TanStack Router & Query",
+      "TanStack Table",
+      "Base UI",
+      "Tailwind CSS",
+      "Drizzle ORM",
+      "PostgreSQL",
+      "Redis",
+      "Socket.IO",
+      "Docker",
+      "Vitest",
+    ],
+    codeUrl: "",
+    liveUrl: "",
+  },
+  {
+    id: "5",
     type: "Freelance Project",
     title: "Alumni System",
     content:
@@ -217,7 +244,7 @@ export const projects: ProjectType[] = [
     liveUrl: "",
   },
   {
-    id: "5",
+    id: "6",
     type: "Freelance Project",
     title: "Pet Adoption System",
     content:
@@ -236,7 +263,7 @@ export const projects: ProjectType[] = [
     liveUrl: "",
   },
   {
-    id: "6",
+    id: "7",
     type: "Capstone",
     title: "Warehouse Inventory System",
     content:
@@ -256,7 +283,7 @@ export const projects: ProjectType[] = [
     liveUrl: "",
   },
   {
-    id: "7",
+    id: "8",
     type: "Personal Project",
     title: "Real-Time Chat Application",
     content:
