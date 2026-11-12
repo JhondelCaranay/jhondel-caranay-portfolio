@@ -224,6 +224,36 @@ export const projects: ProjectType[] = [
   },
   {
     id: "5",
+    type: "Personal Project",
+    title: "Siklo - Software Project Lifecycle Tracker",
+    content:
+      "An internal system for a software team that tracks every project from the first plan until it's shut down, built solo. Each project moves through Planning, Approval, Development, Testing/UAT, Deployment, Live, Maintenance and Shutdown, and every move checks its requirements, like a signed approval or a logged production deployment. A drag-and-drop pipeline and ticket kanban run that flow, with milestones, progress and at-risk flags, time logs, comments with @mentions, and later phases like a v2 that run alongside a live project. After launch it keeps tracking hosting costs, renewals, maintenance and incidents, and a daily job generates service billing records with partial payments and overdue reminders. It also has project chat and DMs over Socket.IO, a client portal, five roles with cost and profit hidden from programmers, a dashboard and reports with CSV and PDF exports, and a permanent read-only archive. It's a record-keeping tool by design, so it issues no receipts and computes no VAT.",
+    image: "/images/siklo-1.png",
+    video: "",
+    caseStudyUrl: "/projects/siklo",
+    techstack: [
+      "Express.js",
+      "TypeScript",
+      "React (Vite)",
+      "TanStack Router & Query",
+      "TanStack Table",
+      "Base UI",
+      "Tailwind CSS",
+      "dnd-kit",
+      "Drizzle ORM",
+      "PostgreSQL",
+      "Redis",
+      "Socket.IO",
+      "Cloudinary",
+      "Resend",
+      "Docker",
+      "Vitest",
+    ],
+    codeUrl: "",
+    liveUrl: "https://siklo-ui.vercel.app",
+  },
+  {
+    id: "6",
     type: "Freelance Project",
     title: "Alumni System",
     content:
@@ -244,7 +274,7 @@ export const projects: ProjectType[] = [
     liveUrl: "",
   },
   {
-    id: "6",
+    id: "7",
     type: "Freelance Project",
     title: "Pet Adoption System",
     content:
@@ -263,7 +293,7 @@ export const projects: ProjectType[] = [
     liveUrl: "",
   },
   {
-    id: "7",
+    id: "8",
     type: "Capstone",
     title: "Warehouse Inventory System",
     content:
@@ -283,7 +313,7 @@ export const projects: ProjectType[] = [
     liveUrl: "",
   },
   {
-    id: "8",
+    id: "9",
     type: "Personal Project",
     title: "Real-Time Chat Application",
     content:
