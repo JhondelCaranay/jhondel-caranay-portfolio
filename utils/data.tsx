@@ -254,6 +254,36 @@ export const projects: ProjectType[] = [
   },
   {
     id: "6",
+    type: "Personal Project",
+    title: "Puro Link - Water Refilling Station Platform",
+    content:
+      "A multi-tenant SaaS for water refilling stations in the Philippines, built solo. Station owners record sales on a POS, track their 5-gallon containers by status and by customer through one movement ledger, take partial payments and see who owes what and for how long. Customers find the nearest approved station on a map, order a refill to their door and follow it live, while riders get their own phone screen with cash-on-delivery and empties. Owners run several stations, give staff permission presets (counter, rider, manager), and pay for Free, Pro or Business plans through PayMongo GCash checkout. A platform admin approves stations and sees counts and billing, never a station's customers or sales. It's a record-keeping tool by design, so it issues no official receipts and computes no VAT.",
+    image: "/images/purolink-1.png",
+    video: "",
+    caseStudyUrl: "/projects/purolink",
+    techstack: [
+      "Express.js",
+      "TypeScript",
+      "React (Vite)",
+      "TanStack Router & Query",
+      "Base UI",
+      "Tailwind CSS",
+      "Leaflet",
+      "Drizzle ORM",
+      "PostgreSQL",
+      "Redis",
+      "Socket.IO",
+      "PayMongo",
+      "Cloudinary",
+      "Resend",
+      "Docker",
+      "Vitest",
+    ],
+    codeUrl: "",
+    liveUrl: "",
+  },
+  {
+    id: "7",
     type: "Freelance Project",
     title: "Alumni System",
     content:
@@ -274,7 +304,7 @@ export const projects: ProjectType[] = [
     liveUrl: "",
   },
   {
-    id: "7",
+    id: "8",
     type: "Freelance Project",
     title: "Pet Adoption System",
     content:
@@ -293,7 +323,7 @@ export const projects: ProjectType[] = [
     liveUrl: "",
   },
   {
-    id: "8",
+    id: "9",
     type: "Capstone",
     title: "Warehouse Inventory System",
     content:
@@ -313,7 +343,7 @@ export const projects: ProjectType[] = [
     liveUrl: "",
   },
   {
-    id: "9",
+    id: "10",
     type: "Personal Project",
     title: "Real-Time Chat Application",
     content:
